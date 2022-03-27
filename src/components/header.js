@@ -1,32 +1,32 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
+import "twin.macro"
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+  <header tw="border-b-2 border-yellow-400">
+    <div tw="container mx-auto py-5">
+      <div tw="flex justify-between text-blue-800">
+        <h1>
+          <Link to="/" tw="font-bold">
+            {siteTitle}
+          </Link>
+        </h1>
+
+        <nav>
+          <ul tw="hidden md:flex items-center space-x-4">
+            <li>
+              <Link>Services</Link>
+            </li>
+            <li>
+              <Link>About</Link>
+            </li>
+            <li>
+              <a href="#">Login</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </header>
 )

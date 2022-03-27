@@ -5,3 +5,5 @@
  */
 
 // You can delete this file if you're not using it
+import "@fontsource/manrope" // Defaults to weight 400.
+import "@fontsource/manrope/700.css" // Weight 700.

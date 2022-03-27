@@ -1,10 +1,12 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "icargo-landing",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "iCargoEx landing website",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Kenneth Chen <efeichen@gmail.com>",
   "dependencies": {
+    "@fontsource/manrope": "^4.5.4",
+    "autoprefixer": "^10.4.4",
     "gatsby": "^4.10.1",
     "gatsby-plugin-gatsby-cloud": "^4.10.0",
     "gatsby-plugin-image": "^2.10.0",
@@ -17,10 +19,16 @@
     "prop-types": "^15.8.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "react-icons": "^4.3.1",
+    "tailwindcss": "^3.0.23"
   },
   "devDependencies": {
-    "prettier": "^2.6.0"
+    "@emotion/react": "^11.8.2",
+    "@emotion/styled": "^11.8.1",
+    "gatsby-plugin-emotion": "^7.10.0",
+    "prettier": "^2.6.0",
+    "twin.macro": "^2.8.2"
   },
   "keywords": [
     "gatsby"
@@ -37,9 +45,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": ""
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": ""
   }
 }
