@@ -28,7 +28,7 @@ const Layout = ({ children }) => {
     <>
       <GlobalStyles />
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <main>{children}</main>
+      <main tw="bg-blue-800">{children}</main>
       <Footer />
     </>
   )

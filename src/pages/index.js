@@ -11,7 +11,7 @@ const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
 
-    <section tw="bg-blue-800 relative">
+    <section tw="relative">
       <StaticImage
         src="../images/hero-bg.png"
         css={css`
@@ -19,13 +19,14 @@ const IndexPage = () => (
           width: 100%;
           height: 100%;
         `}
+        objectPosition="left top"
       />
 
       <div tw="container py-20 z-10 relative">
         <h1 tw="text-yellow-400 text-8xl font-extrabold leading-normal mb-5 w-4/5">
           Fulfilling your promises as online sellers
         </h1>
-        <p tw="text-white text-3xl leading-normal w-2/5 mb-8">
+        <p tw="text-white text-3xl leading-normal w-1/2 mb-8">
           Let us handle the shipments so you can deliver the best to your
           customers
         </p>
@@ -34,7 +35,7 @@ const IndexPage = () => (
       </div>
     </section>
 
-    <section tw="bg-blue-800">
+    <section>
       <div tw="container py-60">
         <div tw="mx-40 mb-20">
           <h1 tw="text-yellow-400 text-7xl font-bold leading-normal mb-10">
@@ -52,6 +53,8 @@ const IndexPage = () => (
         <LogoGrid />
       </div>
     </section>
+
+    <section></section>
   </Layout>
 )
 
