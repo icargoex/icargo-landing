@@ -11,6 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { GlobalStyles } from "twin.macro"
 
 import Header from "./header"
+import Footer from "./footer"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -25,16 +26,10 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <GlobalStyles tw="font-sans" />
+      <GlobalStyles />
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div>
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
-      </div>
+      <main>{children}</main>
+      <Footer />
     </>
   )
 }

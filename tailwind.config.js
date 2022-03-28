@@ -6,6 +6,9 @@ module.exports = {
     fontFamily: {
       sans: ["manrope", ...defaultTheme.fontFamily.sans],
     },
+    container: {
+      center: true,
+    },
   },
   plugins: [],
 }
