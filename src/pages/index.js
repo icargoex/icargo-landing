@@ -54,7 +54,36 @@ const IndexPage = () => (
       </div>
     </section>
 
-    <section></section>
+    <section
+      tw="container flex place-content-between text-xl mb-60"
+      css={css`
+        .text-stats {
+          font-weight: 800;
+          font-size: 15rem;
+          line-height: 1;
+        }
+      `}
+    >
+      <div tw="text-white">
+        <p>Capable of fulfilling Prime orders covering</p>
+        <p tw="text-yellow-400" className="text-stats">
+          97%
+        </p>
+        <p>of continental U.S.A by FedEx, UPS, and other major LTL carriers</p>
+      </div>
+      <div tw="bg-yellow-400 p-10 rounded-xl">
+        <p tw="text-blue-800 text-center" className="text-stats">
+          20
+        </p>
+        <p>e-commerce fulfillment centers in the U.S. and Mexico</p>
+      </div>
+    </section>
+
+    <section>
+      <h1>Our Network</h1>
+
+      <div>cards</div>
+    </section>
   </Layout>
 )
 
