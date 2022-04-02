@@ -6,6 +6,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Button from "../components/button"
 import LogoGrid from "../components/logo-grid"
+import MapInfoCard from "../components/map-info-card"
 
 const IndexPage = () => (
   <Layout>
@@ -79,10 +80,14 @@ const IndexPage = () => (
       </div>
     </section>
 
-    <section>
-      <h1>Our Network</h1>
+    <section tw="container pb-60">
+      <h1 tw="text-center font-extrabold text-7xl text-yellow-400 mb-20">
+        Our Network
+      </h1>
 
-      <div>cards</div>
+      <div>
+        <MapInfoCard />
+      </div>
     </section>
   </Layout>
 )

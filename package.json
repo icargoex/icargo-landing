@@ -21,6 +21,7 @@
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "react-icons": "^4.3.1",
+    "swiper": "^8.0.7",
     "tailwindcss": "^3.0.23"
   },
   "devDependencies": {
@@ -48,6 +49,6 @@
     "url": ""
   },
   "bugs": {
-    "url": ""
+    "url": "https://github.com/efeichen/icargo-landing/issues"
   }
 }
