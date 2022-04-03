@@ -1,15 +1,19 @@
 import * as React from "react"
-import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import "twin.macro"
+import { StaticImage } from "gatsby-plugin-image"
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <header tw="border-b-4 border-yellow-400">
     <div tw="container py-5">
       <div tw="flex justify-between text-blue-800">
         <h1>
           <Link to="/" tw="font-bold">
-            {siteTitle}
+            <StaticImage
+              src="../images/logo.png"
+              alt="iCargoEx logo"
+              width={150}
+            />
           </Link>
         </h1>
 
@@ -24,13 +28,5 @@ const Header = ({ siteTitle }) => (
     </div>
   </header>
 )
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
 
 export default Header
