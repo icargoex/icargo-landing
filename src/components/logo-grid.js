@@ -35,7 +35,7 @@ const LogoGrid = () => {
 }
 
 const GridContainer = styled.div`
-  ${tw`flex bg-white p-10 rounded-xl`}
+  ${tw`flex flex-wrap bg-white p-10 rounded-xl`}
 
   .gatsby-image-wrapper {
     ${tw`m-8`}

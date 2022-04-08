@@ -1,6 +1,6 @@
 import * as React from "react"
 import { StaticImage } from "gatsby-plugin-image"
-import { css } from "twin.macro"
+import tw, { css, styled } from "twin.macro"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -31,25 +31,21 @@ const IndexPage = () => {
         />
 
         <div tw="container py-20 z-10 relative">
-          <h1 tw="text-yellow-400 text-8xl font-extrabold leading-normal mb-5 w-4/5">
-            Fulfilling your promises as online sellers
-          </h1>
-          <p tw="text-white text-3xl leading-normal w-1/2 mb-8">
+          <HeroTitle>Fulfilling our promises to online sellers</HeroTitle>
+          <HeroSubtitle tw="">
             Let us handle the shipments so you can deliver the best to your
             customers
-          </p>
+          </HeroSubtitle>
 
           <Button title="Get a Quote" />
         </div>
       </section>
 
       <section>
-        <div tw="container py-60">
-          <div tw="mx-40 mb-20">
-            <h1 tw="text-yellow-400 text-7xl font-bold leading-normal mb-10">
-              E-Commerce fulfillment on platforms you care about ❤️
-            </h1>
-            <p tw="text-white text-xl">
+        <div tw="container py-20">
+          <div tw="mb-20">
+            <H1>E-Commerce fulfillment on platforms you care about ❤️</H1>
+            <p tw="text-white">
               We have been focused on serving e-commerce sellers on Amazon,
               Walmart, Wayfair, eBay, and Chewy platforms with support by our{" "}
               <span tw="text-yellow-400">Dynamic Logistics Platform</span> which
@@ -62,7 +58,7 @@ const IndexPage = () => {
         </div>
       </section>
 
-      <section
+      {/* <section
         tw="container flex place-content-between text-xl mb-60"
         css={css`
           .text-stats {
@@ -108,9 +104,30 @@ const IndexPage = () => {
           </h1>
         </div>
         <Carousel />
-      </section>
+      </section> */}
     </Layout>
   )
 }
+
+const HeroTitle = styled.h1`
+  ${tw`text-yellow-400 font-extrabold mb-5`}
+
+  ${tw`text-4xl sm:text-5xl sm:leading-normal`}
+  ${tw`md:text-6xl md:leading-relaxed`}
+  ${tw`lg:text-7xl lg:leading-relaxed`}
+  ${tw`xl:text-8xl xl:leading-relaxed`}
+
+  line-height: 3.5rem;
+`
+
+const HeroSubtitle = styled.p`
+  ${tw`text-white leading-normal mb-8`}
+
+  ${tw`sm:text-lg md:text-xl lg:text-2xl xl:text-3xl`}
+`
+
+const H1 = styled.h1`
+  ${tw`text-yellow-400 text-3xl font-bold leading-normal mb-5`}
+`
 
 export default IndexPage
