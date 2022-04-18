@@ -7,9 +7,8 @@ import { FiUsers, FiPhone } from "react-icons/fi"
 const MapInfoCard = ({ code, size, address, contact, phone, features }) => {
   return (
     <div
-      tw="inline-flex p-10 bg-white w-auto rounded-xl space-x-10 place-content-between"
+      tw="md:inline-flex p-10 bg-white w-auto rounded-xl md:space-x-10 place-content-between"
       css={css`
-        min-width: 37rem;
         min-height: 20rem;
       `}
     >
@@ -21,14 +20,14 @@ const MapInfoCard = ({ code, size, address, contact, phone, features }) => {
         <ul tw="mt-5 space-y-3">
           {features &&
             features.map((feature, i) => (
-              <li key={i}>
-                <BsCheck2Circle tw="text-green-500 inline mr-2 text-xl" />
+              <li key={i} tw="flex">
+                <BsCheck2Circle tw="text-green-500 inline mr-2 text-xl mt-1" />
                 {feature}
               </li>
             ))}
         </ul>
       </div>
-      <div>
+      <div tw="mt-10 md:mt-0">
         <div tw="flex">
           <FiUsers tw="inline mr-2 text-xl" />
           <p tw="mb-3">

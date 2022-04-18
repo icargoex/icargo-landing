@@ -10,6 +10,7 @@ import MapInfoCard from "../components/map-info-card"
 import Carousel from "../components/carousel"
 
 import network from "../data/network"
+import { BREAKPOINTS } from "../utils/constants"
 
 const IndexPage = () => {
   const networkData = network
@@ -45,30 +46,21 @@ const IndexPage = () => {
         <div tw="container py-20">
           <div tw="mb-20">
             <H1>E-Commerce fulfillment on platforms you care about ❤️</H1>
-            <p tw="text-white">
+            <P tw="text-white">
               We have been focused on serving e-commerce sellers on Amazon,
               Walmart, Wayfair, eBay, and Chewy platforms with support by our{" "}
               <span tw="text-yellow-400">Dynamic Logistics Platform</span> which
               enables customers to optimize their fulfillment strategies and
               resources on a single system.
-            </p>
+            </P>
           </div>
 
           <LogoGrid />
         </div>
       </section>
 
-      {/* <section
-        tw="container flex place-content-between text-xl mb-60"
-        css={css`
-          .text-stats {
-            font-weight: 800;
-            font-size: 15rem;
-            line-height: 1;
-          }
-        `}
-      >
-        <div tw="text-white">
+      <StatsSection tw="mb-20 lg:mb-60">
+        <div tw="text-white mt-20">
           <p>Capable of fulfilling Prime orders covering</p>
           <p tw="text-yellow-400" className="text-stats">
             97%
@@ -77,20 +69,18 @@ const IndexPage = () => {
             of continental U.S.A by FedEx, UPS, and other major LTL carriers
           </p>
         </div>
-        <div tw="bg-yellow-400 p-10 rounded-xl">
-          <p tw="text-blue-800 text-center" className="text-stats">
+        <div tw="bg-yellow-400 p-10 rounded-xl mt-20">
+          <p tw="text-blue-800 lg:text-center" className="text-stats">
             20
           </p>
           <p>e-commerce fulfillment centers in the U.S. and Mexico</p>
         </div>
-      </section>
+      </StatsSection>
 
       <section tw="container pb-60">
-        <h1 tw="text-center font-extrabold text-7xl text-yellow-400 mb-20">
-          Our Network
-        </h1>
+        <H1 tw="text-center">Our Network</H1>
 
-        <div tw="flex flex-wrap place-content-around space-y-10">
+        <div tw="grid grid-cols-1 lg:grid-cols-2 gap-4">
           {networkData.map((data, i) => {
             return <MapInfoCard {...data} key={i} />
           })}
@@ -99,12 +89,10 @@ const IndexPage = () => {
 
       <section>
         <div tw="container">
-          <h1 tw="text-center font-extrabold text-7xl text-yellow-400 mb-20">
-            Supercharge your supply chain ⚡️
-          </h1>
+          <H1>Supercharge your supply chain</H1>
         </div>
         <Carousel />
-      </section> */}
+      </section>
     </Layout>
   )
 }
@@ -128,6 +116,26 @@ const HeroSubtitle = styled.p`
 
 const H1 = styled.h1`
   ${tw`text-yellow-400 text-3xl font-bold leading-normal mb-5`}
+
+  ${tw`md:text-6xl md:leading-relaxed`}
+  ${tw`xl:text-8xl xl:leading-relaxed`}
+`
+
+const P = styled.p`
+  ${tw`text-white lg:text-lg xl:text-xl`}
+`
+
+const StatsSection = styled.section`
+  ${tw`container lg:flex place-content-between text-xl lg:space-x-20`}
+
+  .text-stats {
+    ${tw`font-extrabold text-9xl leading-none mb-0`}
+
+    @media (min-width: ${BREAKPOINTS.xl}) {
+      font-size: 15rem;
+      line-height: 1;
+    }
+  }
 `
 
 export default IndexPage
