@@ -72,7 +72,7 @@ const Pin = styled.div`
   height: 10%;
   position: absolute;
   transform: translate(-50%, -50%);
-  transition: height 0.5s, display 0.5s;
+  transition: height 0.5s;
 
   .pin {
     width: 4vw;
@@ -91,8 +91,10 @@ const Pin = styled.div`
         ? position[0] - 950
         : position[0] + 100}%;
     top: ${({ position }) => position[1] - 80}%;
-    ${({ active }) => !active && "display: none;"}
-    transition: opacity 0.5s;
+    opacity: ${({ active }) => !active && "0"};
+    visibility: ${({ active }) => !active && "hidden"};
+    transition: visibility 0.5s, opacity 0.5s;
+    cursor: auto;
   }
 
   &:hover {

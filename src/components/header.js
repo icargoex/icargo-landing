@@ -18,9 +18,25 @@ const Header = () => (
         </h1>
 
         <nav>
-          <ul tw="hidden md:flex items-center space-x-4">
+          <ul tw="hidden md:flex items-center space-x-6">
+            <li>
+              <a href="http://icargoex.com/login">About</a>
+            </li>
+            <li>
+              <a href="http://icargoex.com/login">Network</a>
+            </li>
             <li>
               <a href="http://icargoex.com/login">Login</a>
+            </li>
+            <li>
+              <a
+                href="mailto:ken@icargoex.com?subject=Request For Quote"
+                target="_blank"
+                rel="noreferrer"
+                tw="font-bold bg-yellow-400 py-2 px-5 rounded"
+              >
+                Let's Talk
+              </a>
             </li>
           </ul>
         </nav>

@@ -6,7 +6,6 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Button from "../components/button"
 import LogoGrid from "../components/logo-grid"
-import MapInfoCard from "../components/map-info-card"
 import Carousel from "../components/carousel"
 
 import network from "../data/network"
@@ -39,7 +38,10 @@ const IndexPage = () => {
             customers
           </HeroSubtitle>
 
-          <Button title="Get a Quote" />
+          <Button
+            title="Talk To An Expert"
+            to="mailto:ken@icargoex.com?subject=Request For Quote"
+          />
         </div>
       </section>
 
@@ -78,10 +80,17 @@ const IndexPage = () => {
         </div>
       </StatsSection>
 
-      <section tw="container pb-60">
+      <section tw="container pb-48">
         <H1 tw="text-center">Our Network</H1>
 
         <NetworkMap data={networkData} />
+
+        <div tw="pt-36 flex justify-center">
+          <Button
+            title="Talk To An Expert"
+            to="mailto:ken@icargoex.com?subject=Request For Quote"
+          />
+        </div>
       </section>
 
       <section>
