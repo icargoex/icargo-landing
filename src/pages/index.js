@@ -11,6 +11,7 @@ import Carousel from "../components/carousel"
 
 import network from "../data/network"
 import { BREAKPOINTS } from "../utils/constants"
+import NetworkMap from "../components/network-map"
 
 const IndexPage = () => {
   const networkData = network
@@ -80,11 +81,7 @@ const IndexPage = () => {
       <section tw="container pb-60">
         <H1 tw="text-center">Our Network</H1>
 
-        <div tw="grid grid-cols-1 lg:grid-cols-2 gap-4">
-          {networkData.map((data, i) => {
-            return <MapInfoCard {...data} key={i} />
-          })}
-        </div>
+        <NetworkMap data={networkData} />
       </section>
 
       <section>

@@ -6,6 +6,7 @@ const data = [
     contact: ["Emma Zhuang"],
     phone: "(626) 500-9889",
     features: [],
+    position: [8, 54],
   },
   {
     code: "WL-CA",
@@ -14,6 +15,7 @@ const data = [
     contact: ["Sunny Li", "Bright Yang"],
     phone: "(530) 601-3658",
     features: ["FBM by FedEx, UPS & LTL", "FBA Storage & Trans Shipping"],
+    position: [5, 42],
   },
   {
     code: "ML-UT",
@@ -22,6 +24,7 @@ const data = [
     contact: ["Ashley McLean"],
     phone: "(888) 752-2828",
     features: ["FBM by FedEx, UPS & LTL"],
+    position: [23, 40],
   },
   {
     code: "LD-NJ",
@@ -34,6 +37,7 @@ const data = [
       "FBA Storage & Trans Shipping",
       "3PL Project",
     ],
+    position: [91, 30],
   },
   {
     code: "BC-GA",
@@ -47,6 +51,7 @@ const data = [
       "Returns Processing",
       "3PL Project",
     ],
+    position: [79, 68],
   },
 ]
 

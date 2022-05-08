@@ -7,10 +7,12 @@ import { FiUsers, FiPhone } from "react-icons/fi"
 const MapInfoCard = ({ code, size, address, contact, phone, features }) => {
   return (
     <div
-      tw="md:inline-flex p-10 bg-white w-auto rounded-xl md:space-x-10 place-content-between"
+      tw="md:inline-flex p-10 bg-white rounded-xl md:space-x-10 place-content-between"
       css={css`
         min-height: 20rem;
+        min-width: 35vw;
       `}
+      className="card"
     >
       <div>
         <p tw="text-sm text-gray-500">{size.toLocaleString("en-US")} sqft</p>
