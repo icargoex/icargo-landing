@@ -1,14 +1,18 @@
 import * as React from "react"
+import { StaticImage } from "gatsby-plugin-image"
 import tw, { css } from "twin.macro"
 import { Link as Scroll } from "react-scroll"
-import Logo from "../images/logo-full.png"
 
 const Footer = () => {
   return (
     <footer tw="container py-20">
       <div tw="flex flex-wrap gap-x-32">
         <div>
-          <img src={Logo} alt="iCargoEx logo" width={200} />
+          <StaticImage
+            src="../images/logo-full.png"
+            alt="iCargoEx logo"
+            width={200}
+          />
 
           <p tw="mt-10">Fulfilling our promises to online sellers</p>
         </div>
