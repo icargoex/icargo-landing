@@ -9,7 +9,7 @@ const Footer = () => {
       <div tw="flex flex-wrap gap-x-32">
         <div>
           <StaticImage
-            src="../images/logo-full.png"
+            src="../images/logo-full.PNG"
             alt="iCargoEx logo"
             width={200}
           />
