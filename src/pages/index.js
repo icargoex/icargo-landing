@@ -45,7 +45,7 @@ const IndexPage = () => {
         </div>
       </section>
 
-      <section>
+      <section id="about">
         <div tw="container py-20">
           <div tw="mb-20">
             <H1>E-Commerce fulfillment on platforms you care about ❤️</H1>
@@ -80,7 +80,7 @@ const IndexPage = () => {
         </div>
       </StatsSection>
 
-      <section tw="container pb-48">
+      <section tw="container pb-48" id="network">
         <H1 tw="text-center">Our Network</H1>
 
         <NetworkMap data={networkData} />

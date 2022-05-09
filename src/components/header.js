@@ -1,7 +1,8 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import "twin.macro"
+import tw, { styled } from "twin.macro"
 import { StaticImage } from "gatsby-plugin-image"
+import { Link as Scroll } from "react-scroll"
 
 const Header = () => (
   <header tw="border-b-4 border-yellow-400">
@@ -17,13 +18,17 @@ const Header = () => (
           </Link>
         </h1>
 
-        <nav>
+        <StyledNav>
           <ul tw="hidden md:flex items-center space-x-6">
             <li>
-              <a href="http://icargoex.com/login">About</a>
+              <Scroll to="about" spy smooth>
+                About
+              </Scroll>
             </li>
             <li>
-              <a href="http://icargoex.com/login">Network</a>
+              <Scroll to="network" spy smooth>
+                Network
+              </Scroll>
             </li>
             <li>
               <a href="http://icargoex.com/login">Login</a>
@@ -39,10 +44,18 @@ const Header = () => (
               </a>
             </li>
           </ul>
-        </nav>
+        </StyledNav>
       </div>
     </div>
   </header>
 )
 
 export default Header
+
+const StyledNav = styled.nav`
+  li {
+    cursor: pointer;
+
+    ${tw`hover:text-blue-900 hover:transition-colors transition-colors`}
+  }
+`
