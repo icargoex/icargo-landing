@@ -35,7 +35,7 @@ const Header = () => (
             </li>
             <li>
               <a
-                href="mailto:ken@icargoex.com?subject=Request For Quote"
+                href="mailto:info@icargoex.com?subject=Request For Quote"
                 target="_blank"
                 rel="noreferrer"
                 tw="font-bold bg-yellow-400 py-2 px-5 rounded"

@@ -32,15 +32,15 @@ const IndexPage = () => {
         />
 
         <div tw="container py-20 z-10 relative">
-          <HeroTitle>Fulfilling our promises to online sellers</HeroTitle>
-          <HeroSubtitle tw="">
+          <HeroTitle>You Sell, We Deliver.</HeroTitle>
+          <HeroSubtitle tw="mb-20">
             Let us handle the shipments so you can deliver the best to your
             customers
           </HeroSubtitle>
 
           <Button
             title="Talk To An Expert"
-            to="mailto:ken@icargoex.com?subject=Request For Quote"
+            to="mailto:info@icargoex.com?subject=Request For Quote"
           />
         </div>
       </section>
@@ -88,7 +88,7 @@ const IndexPage = () => {
         <div tw="pt-36 flex justify-center">
           <Button
             title="Talk To An Expert"
-            to="mailto:ken@icargoex.com?subject=Request For Quote"
+            to="mailto:info@icargoex.com?subject=Request For Quote"
           />
         </div>
       </section>

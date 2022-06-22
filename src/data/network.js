@@ -29,7 +29,7 @@ const data = [
   {
     code: "LD-NJ",
     size: 200000,
-    address: "1600 Lower Road, Linden, NJ 070 ",
+    address: "1600 Lower Road, Linden, NJ 070",
     contact: ["Emma Wu", "Andy Pang"],
     phone: "(908) 266-0470",
     features: [
@@ -38,11 +38,12 @@ const data = [
       "3PL Project",
     ],
     position: [91, 30],
+    cardOffset: [-1050, 0],
   },
   {
     code: "BC-GA",
     size: 140000,
-    address: "2751 Buford Hwy, Suite 200, Buford, GA 30518 ",
+    address: "2751 Buford Hwy, Suite 200, Buford, GA 30518",
     contact: ["Jose Chang", "Stacy Li"],
     phone: "(740) 960-8113",
     features: [
@@ -52,6 +53,24 @@ const data = [
       "3PL Project",
     ],
     position: [79, 68],
+    cardOffset: [-1050, 0],
+  },
+  {
+    code: "NL-TX",
+    size: 50000,
+    address: "7207 N Loop E,Houston,Tx 77028",
+    contact: ["Sky Ren"],
+    phone: "(415) 606-0798",
+    position: [50, 85],
+  },
+  {
+    code: "TEC-MX",
+    size: 65000,
+    address: "Tecate, Baja California",
+    contact: ["Juliana Solis"],
+    phone: "juliana@mexus.me",
+    features: [],
+    position: [8, 78],
   },
 ]
 

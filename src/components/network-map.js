@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import tw, { styled } from "twin.macro"
 import { FiMapPin } from "react-icons/fi"
 
-import MapImg from "../images/us-map.svg"
+import MapImg from "../images/us-mx-map.svg"
 import MapInfoCard from "./map-info-card"
 
 const NetworkMap = ({ data }) => {
@@ -26,7 +26,7 @@ const NetworkMap = ({ data }) => {
             return (
               <Pin
                 position={pin.position}
-                code={pin.code}
+                cardOffset={pin.cardOffset}
                 onMouseOver={() => handleMouseOver(pin.code)}
                 onMouseOut={handleMouseOut}
                 key={pin.code}
@@ -66,8 +66,6 @@ const Pin = styled.div`
   left: ${({ position }) => position[0]}%;
   top: ${({ position }) => position[1]}%;
 
-  ${({ code }) => code === "WL-CA" && tw`z-50`}
-
   width: 5%;
   height: 10%;
   position: absolute;
@@ -85,12 +83,15 @@ const Pin = styled.div`
 
   .card {
     position: absolute;
+
+    ${({ cardOffset, position }) => console.log(cardOffset)}
+
     // adjust info card position based on where they are on map
-    left: ${({ code, position }) =>
-      code.includes("NJ") || code.includes("GA")
-        ? position[0] - 950
-        : position[0] + 100}%;
-    top: ${({ position }) => position[1] - 80}%;
+    left: ${({ cardOffset, position }) =>
+      position[0] + (cardOffset ? cardOffset[0] : 0) + 100}%;
+    top: ${({ cardOffset, position }) =>
+      position[1] + (cardOffset ? cardOffset[1] : 0) - 80}%;
+
     opacity: ${({ active }) => !active && "0"};
     visibility: ${({ active }) => !active && "hidden"};
     transition: visibility 0.5s, opacity 0.5s;
@@ -101,5 +102,6 @@ const Pin = styled.div`
     height: 12%;
     transition: height 0.5s;
     cursor: pointer;
+    z-index: 50;
   }
 `
