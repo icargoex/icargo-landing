@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import tw, { styled } from "twin.macro"
+import tw, { css, styled } from "twin.macro"
 import { FiMapPin } from "react-icons/fi"
 
 import MapImg from "../images/us-mx-map.svg"
@@ -33,6 +33,15 @@ const NetworkMap = ({ data }) => {
                 active={active === pin.code}
               >
                 <FiMapPin className="pin" />
+
+                <span
+                  tw="block mt-2 mx-auto p-1 text-xs text-center bg-yellow-400 rounded-full"
+                  css={css`
+                    width: fit-content;
+                  `}
+                >
+                  {pin.label}
+                </span>
 
                 <MapInfoCard {...pin} />
               </Pin>
@@ -83,8 +92,6 @@ const Pin = styled.div`
 
   .card {
     position: absolute;
-
-    ${({ cardOffset, position }) => console.log(cardOffset)}
 
     // adjust info card position based on where they are on map
     left: ${({ cardOffset, position }) =>

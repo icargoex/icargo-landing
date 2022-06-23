@@ -48,6 +48,24 @@ const IndexPage = () => {
       <section id="about">
         <div tw="container py-20">
           <div tw="mb-20">
+            <H1>About iCargoEx Inc.</H1>
+            <P>
+              Established in 2018 and headquartered in Atlanta Georgia, iCargoEx
+              has quickly emerged as a major player of e-commerce fulfillment
+              center with warehouses and operations in seven regions in the U.S.
+              and Mexico including Atlanta GA, Salt Lake City, UT, Houston TX,
+              New Jersey, Southern & Northern, California and Baja Mexico. We
+              have been focused on serving e-commerce sellers on Amazon,
+              Walmart, Wayfair, eBay, and Chewy platforms with support by our
+              Dynamic Logistics Platform which enables customers to optimize
+              their fulfillment strategies and resources on a single system. We
+              specialize in handling large items ranging from furniture to
+              ebike. With a professional service team in China, we’re able to
+              provide door to door logistics solutions from China, Vietnan, and
+              Thailand to all major ports and inland locations in the U.S.
+            </P>
+          </div>
+          <div tw="mb-20">
             <H1>E-Commerce fulfillment on platforms you care about ❤️</H1>
             <P tw="text-white">
               We have been focused on serving e-commerce sellers on Amazon,
@@ -124,7 +142,7 @@ const H1 = styled.h1`
   ${tw`text-yellow-400 text-3xl font-bold leading-normal mb-5`}
 
   ${tw`md:text-6xl md:leading-relaxed`}
-  ${tw`xl:text-8xl xl:leading-relaxed`}
+  ${tw`xl:text-7xl xl:leading-relaxed`}
 `
 
 const P = styled.p`

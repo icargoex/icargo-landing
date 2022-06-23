@@ -14,7 +14,7 @@ const MapInfoCard = ({ code, size, address, contact, phone, features }) => {
       className="card"
     >
       <div>
-        <p tw="text-sm text-gray-500">{size.toLocaleString("en-US")} sqft</p>
+        <p tw="text-sm text-gray-500">{size.toLocaleString("en-US")} sqf</p>
         <h1 tw="font-bold text-5xl">{code}</h1>
         <p tw="text-sm text-gray-500">{address}</p>
 

@@ -1,6 +1,7 @@
 const data = [
   {
     code: "ND-CA",
+    label: "LA",
     size: 65000,
     address: "11089 Tacoma Dr, Rancho Cucamonga, CA 91730",
     contact: ["Emma Zhuang"],
@@ -10,7 +11,8 @@ const data = [
   },
   {
     code: "WL-CA",
-    size: 120000,
+    label: "OAK",
+    size: 200000,
     address: "550 N Pioneer Ave, Suite 200, Woodland, CA 95776",
     contact: ["Sunny Li", "Bright Yang"],
     phone: "(530) 601-3658",
@@ -19,6 +21,7 @@ const data = [
   },
   {
     code: "ML-UT",
+    label: "SLT",
     size: 30000,
     address: "1950 N 2200 W, Suite 300, Salt Lake City, UT 84116",
     contact: ["Ashley McLean"],
@@ -28,6 +31,7 @@ const data = [
   },
   {
     code: "LD-NJ",
+    label: "NY/NJ",
     size: 200000,
     address: "1600 Lower Road, Linden, NJ 070",
     contact: ["Emma Wu", "Andy Pang"],
@@ -42,6 +46,7 @@ const data = [
   },
   {
     code: "BC-GA",
+    label: "ATL",
     size: 140000,
     address: "2751 Buford Hwy, Suite 200, Buford, GA 30518",
     contact: ["Jose Chang", "Stacy Li"],
@@ -57,20 +62,22 @@ const data = [
   },
   {
     code: "NL-TX",
+    label: "HOU",
     size: 50000,
     address: "7207 N Loop E,Houston,Tx 77028",
-    contact: ["Sky Ren"],
+    contact: ["Sky Luo"],
     phone: "(415) 606-0798",
     position: [50, 85],
   },
   {
     code: "TEC-MX",
+    label: "Baja-MX",
     size: 65000,
     address: "Tecate, Baja California",
     contact: ["Juliana Solis"],
     phone: "juliana@mexus.me",
     features: [],
-    position: [8, 78],
+    position: [3, 74],
   },
 ]
 
