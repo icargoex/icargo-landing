@@ -50,7 +50,7 @@ const data = [
     size: 140000,
     address: "2751 Buford Hwy, Suite 200, Buford, GA 30518",
     contact: ["Jose Chang", "Stacy Li"],
-    phone: "(740) 960-8113",
+    phone: "(470) 760-8113",
     features: [
       "FBM by FedEx, UPS & LTL",
       "FBA Storage & Trans Shipping",
@@ -63,7 +63,7 @@ const data = [
   {
     code: "NL-TX",
     label: "HOU",
-    size: 50000,
+    size: 140000,
     address: "7207 N Loop E,Houston,Tx 77028",
     contact: ["Sky Luo"],
     phone: "(415) 606-0798",
