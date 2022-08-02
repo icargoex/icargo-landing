@@ -7,7 +7,7 @@ const data = [
     contact: ["Emma Zhuang"],
     phone: "(626) 500-9889",
     features: [],
-    position: [8, 54],
+    position: [15, 54],
   },
   {
     code: "WL-CA",
@@ -17,7 +17,7 @@ const data = [
     contact: ["Sunny Li", "Bright Yang"],
     phone: "(530) 601-3658",
     features: ["FBM by FedEx, UPS & LTL", "FBA Storage & Trans Shipping"],
-    position: [5, 42],
+    position: [12, 42],
   },
   {
     code: "ML-UT",
@@ -27,7 +27,7 @@ const data = [
     contact: ["Ashley McLean"],
     phone: "(888) 752-2828",
     features: ["FBM by FedEx, UPS & LTL"],
-    position: [23, 40],
+    position: [28, 40],
   },
   {
     code: "LD-NJ",
@@ -41,8 +41,8 @@ const data = [
       "FBA Storage & Trans Shipping",
       "3PL Project",
     ],
-    position: [91, 30],
-    cardOffset: [-1050, 0],
+    position: [84, 30],
+    cardOffset: [-960, 0],
   },
   {
     code: "BC-GA",
@@ -57,8 +57,8 @@ const data = [
       "Returns Processing",
       "3PL Project",
     ],
-    position: [79, 68],
-    cardOffset: [-1050, 0],
+    position: [74, 68],
+    cardOffset: [-960, 0],
   },
   {
     code: "NL-TX",
@@ -67,7 +67,8 @@ const data = [
     address: "7207 N Loop E,Houston,Tx 77028",
     contact: ["Sky Luo"],
     phone: "(415) 606-0798",
-    position: [50, 85],
+    position: [52, 85],
+    cardOffset: [-400, -200],
   },
   {
     code: "TEC-MX",
@@ -77,7 +78,7 @@ const data = [
     contact: ["Juliana Solis"],
     phone: "juliana@mexus.me",
     features: [],
-    position: [3, 74],
+    position: [11, 74],
   },
 ]
 

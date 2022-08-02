@@ -32,7 +32,7 @@ const IndexPage = () => {
         />
 
         <div tw="container py-20 z-10 relative">
-          <HeroTitle>You Sell, We Deliver.</HeroTitle>
+          <HeroTitle>Fulfill Your Dreams</HeroTitle>
           <HeroSubtitle tw="mb-20">
             Let us handle the shipments so you can deliver the best to your
             customers

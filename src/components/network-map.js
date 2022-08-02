@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import tw, { css, styled } from "twin.macro"
-import { FiMapPin } from "react-icons/fi"
+import { RiMapPin2Fill } from "react-icons/ri"
 
 import MapImg from "../images/us-mx-map.svg"
 import MapInfoCard from "./map-info-card"
@@ -12,7 +12,7 @@ const NetworkMap = ({ data }) => {
     setActive(code)
   }
 
-  const handleMouseOut = e => {
+  const handleMouseOut = () => {
     setActive("")
   }
 
@@ -22,31 +22,34 @@ const NetworkMap = ({ data }) => {
         <BgImg src={MapImg} />
 
         <MapOverlay>
-          {data.map(pin => {
-            return (
-              <Pin
-                position={pin.position}
-                cardOffset={pin.cardOffset}
-                onMouseOver={() => handleMouseOver(pin.code)}
-                onMouseOut={handleMouseOut}
-                key={pin.code}
-                active={active === pin.code}
-              >
-                <FiMapPin className="pin" />
-
-                <span
-                  tw="block mt-2 mx-auto p-1 text-xs text-center bg-yellow-400 rounded-full"
-                  css={css`
-                    width: fit-content;
-                  `}
+          <div>
+            {data.map(pin => {
+              return (
+                <Pin
+                  position={pin.position}
+                  cardOffset={pin.cardOffset}
+                  onMouseOver={() => handleMouseOver(pin.code)}
+                  onMouseOut={handleMouseOut}
+                  key={pin.code}
+                  active={active === pin.code}
                 >
-                  {pin.label}
-                </span>
+                  <RiMapPin2Fill className="pin" />
 
-                <MapInfoCard {...pin} />
-              </Pin>
-            )
-          })}
+                  {/* label component */}
+                  <span
+                    tw="block md:mt-2 mt-1 mx-auto p-1 text-[5px] md:text-xs text-center bg-yellow-400 rounded-full"
+                    css={css`
+                      width: fit-content;
+                    `}
+                  >
+                    {pin.label}
+                  </span>
+
+                  <MapInfoCard {...pin} />
+                </Pin>
+              )
+            })}
+          </div>
         </MapOverlay>
       </div>
     </MapContainer>
@@ -56,8 +59,12 @@ const NetworkMap = ({ data }) => {
 export default NetworkMap
 
 const MapContainer = styled.div`
-  overflow: hidden;
   position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
 `
 
 const BgImg = styled.img`
@@ -88,6 +95,7 @@ const Pin = styled.div`
     min-height: 4vw;
     ${tw`text-yellow-400`}
     position: relative;
+    margin: 0 auto;
   }
 
   .card {
