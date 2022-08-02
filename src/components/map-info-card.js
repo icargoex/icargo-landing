@@ -1,4 +1,5 @@
 import * as React from "react"
+import "twin.macro"
 import { BsCheck2Circle } from "react-icons/bs"
 import { FiUsers, FiPhone } from "react-icons/fi"
 
