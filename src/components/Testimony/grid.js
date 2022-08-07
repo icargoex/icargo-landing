@@ -4,8 +4,7 @@ import "twin.macro"
 
 const TestimonyGrid = () => {
   return (
-    <div tw="grid grid-cols-2 gap-12">
-      <TestimonyCard />
+    <div tw="grid grid-cols-1 gap-12">
       <TestimonyCard />
     </div>
   )
