@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import tw, { css, styled } from "twin.macro"
 import { RiMapPin2Fill } from "react-icons/ri"
 
-import MapImg from "../images/us-mx-map.svg"
+import MapImg from "../../images/us-mx-map.svg"
 import MapInfoCard from "./map-info-card"
 
 const NetworkMap = ({ data }) => {

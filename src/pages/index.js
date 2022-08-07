@@ -6,11 +6,12 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Button from "../components/button"
 import LogoGrid from "../components/logo-grid"
-import Carousel from "../components/carousel"
+import Carousel from "../components/photo-carousel"
 
 import network from "../data/network"
 import { BREAKPOINTS } from "../utils/constants"
-import NetworkMap from "../components/network-map"
+import NetworkMap from "../components/Map/network-map"
+import TestimonyGrid from "../components/Testimony/grid"
 
 const IndexPage = () => {
   const networkData = network
@@ -102,6 +103,14 @@ const IndexPage = () => {
             title="Talk To An Expert"
             to="mailto:info@icargoex.com?subject=Request For Quote"
           />
+        </div>
+      </section>
+
+      <section tw="bg-yellow-400 mb-20">
+        <div tw="container p-10">
+          <H1 tw="text-blue-800 text-center">What Our Clients Say</H1>
+
+          <TestimonyGrid />
         </div>
       </section>
 
