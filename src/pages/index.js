@@ -12,6 +12,7 @@ import network from "../data/network"
 import { BREAKPOINTS } from "../utils/constants"
 import NetworkMap from "../components/Map/network-map"
 import TestimonyGrid from "../components/Testimony/grid"
+import GradientTitleBanner from "../components/gradient-title-banner"
 
 const IndexPage = () => {
   const networkData = network
@@ -21,29 +22,7 @@ const IndexPage = () => {
       <Seo title="Home" />
 
       <section tw="relative">
-        <StaticImage
-          src="../images/hero-bg.png"
-          css={css`
-            position: absolute;
-            width: 100%;
-            height: 100%;
-          `}
-          objectPosition="left top"
-          alt=""
-        />
-
-        <div tw="container py-20 z-10 relative">
-          <HeroTitle>Fulfill Your Dreams</HeroTitle>
-          <HeroSubtitle tw="mb-20">
-            Let us handle the shipments so you can deliver the best to your
-            customers
-          </HeroSubtitle>
-
-          <Button
-            title="Talk To An Expert"
-            to="mailto:info@icargoex.com?subject=Request For Quote"
-          />
-        </div>
+        <GradientTitleBanner />
       </section>
 
       <section id="about">

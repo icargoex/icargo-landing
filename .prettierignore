@@ -2,3 +2,6 @@
 package.json
 package-lock.json
 public
+
+# vendor files don't need to be formatted
+src/utils/gradient.js
