@@ -3,7 +3,7 @@ const data = [
     id: "mika-micky",
     title: "Mika Micky - #1 Seller in Bedside Cribs on Amazon",
     message:
-      "We've partnering with iCargoEx from very beganning our Amazon business when we launched our first product in 2018. And they have been helping us in almost every aspect of our logistics from freight to Amazon FC to handling warehousing, customer returns and spare parts fulfillment. We're very lucky to have such a partner that we can truly account on.",
+      "We have been partnering with iCargoEx since the very beginning of our Amazon business, when we launched our first product in 2018. They have been helping us in almost every aspect of our logistics from freight to Amazon FC to handling warehousing, customer returns, and spare parts fulfillment. We are very lucky to have such a partner that we can truly rely on.",
     signature: "Nicole Wang, Founder and CEO",
   },
   {

@@ -95,7 +95,7 @@ const IndexPage = () => {
 
       <section>
         <div tw="container">
-          <H1>Supercharge your supply chain</H1>
+          <H1 tw="text-center">Supercharge your supply chain</H1>
         </div>
         <Carousel />
       </section>
