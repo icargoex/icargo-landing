@@ -33,9 +33,8 @@ const IndexPage = () => {
               Established in 2018 and headquartered in Atlanta Georgia, iCargoEx
               has quickly emerged as a major player of e-commerce fulfillment
               center with warehouses and operations in seven regions in the U.S.
-              and Mexico including Atlanta GA, Salt Lake City UT, Houston TX,
-              New Jersey NY, Southern & Northern California, and Baja California
-              Mexico.
+              and Mexico including Atlanta, New Jersey, Houston, Salt Lake City,
+              Sacramento, Los Angeles, and Tecate, BC Mexico.
             </P>
             <P>
               We have been focused on serving e-commerce sellers on Amazon,
