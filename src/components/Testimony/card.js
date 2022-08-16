@@ -1,32 +1,17 @@
-import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
 import "twin.macro"
 
-function TestimonyCard() {
+function TestimonyCard({ name, body, signature, id, logo }) {
+  console.log(name)
   return (
     <div tw="bg-white p-10 rounded-xl text-center">
-      <StaticImage
-        src="../../images/logos/mika-micky.png"
-        width={300}
-        tw="mb-5"
-      />
-      <h1 tw="mb-3 text-gray-400 text-sm">
-        Mika Micky - #1 Seller in Bedside Cribs on Amazon
-      </h1>
+      <img src={logo} alt={`${id} logo`} width={300} tw="mb-5 mx-auto" />
+      <h1 tw="mb-3 text-gray-400 text-sm">{name}</h1>
       <figure>
         <blockquote>
-          <p tw="font-bold text-blue-800">
-            We have been partnering with iCargoEx since the very beginning of
-            our Amazon business, when we launched our first product in 2018.
-            They have been helping us in almost every aspect of our logistics
-            from freight to Amazon FC to handling warehousing, customer returns,
-            and spare parts fulfillment. We are very lucky to have such a
-            partner that we can truly rely on.
-          </p>
+          <p tw="font-bold text-blue-800">{body}</p>
         </blockquote>
-        <figcaption tw="mt-5 text-gray-400 text-sm">
-          Nicole Wang, Founder and CEO
-        </figcaption>
+        <figcaption tw="mt-5 text-gray-400 text-sm">{signature}</figcaption>
       </figure>
     </div>
   )
