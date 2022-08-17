@@ -4,7 +4,7 @@ import "twin.macro"
 function TestimonyCard({ name, body, signature, id, logo }) {
   console.log(name)
   return (
-    <div tw="bg-white p-10 rounded-xl text-center">
+    <div tw="bg-white p-10 rounded-xl">
       <img src={logo} alt={`${id} logo`} width={300} tw="mb-5 mx-auto" />
       <h1 tw="mb-3 text-gray-400 text-sm">{name}</h1>
       <figure>

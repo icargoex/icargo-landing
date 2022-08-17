@@ -12,8 +12,8 @@ const data = [
   {
     id: "bai",
     name: "BAi - Online Seller of Embroidery Machine",
-    body: "Fulfillment of our oversized crated embroidery machines had been a huge problem blocking our sales before we were introduced to iCargoEx by one of their customers. They provides us the most reliable and comprehensive LTL solutions deliverying to our residential customers in the U.S. We're now capable of shipping our products from four locations in the U.S. and 90% delivered with 7 busines days. This has become a key factor that driving our sales volume.",
-    signature: "Meng Gao, Founder & CEO of BAi",
+    body: "High cost, unreliable transit time, and various issues in last mile delivery had been the major obstacles effecting our sales performance before we were introduced to iCargoEx. iCargoEx provides us the most reliable and comprehensive LTL solutions. We’re now capable of shipping our crated embroidery machines by selected LTL carriers from four of their warehouse locations with 90% delivery rate within 7 business days. The improvement in customer satisfaction and reducetion in costs have played as key factors that driving our sales growth.",
+    signature: "Tony Gao, Founder & CEO",
     logo: LogoBai,
   },
 ]
