@@ -49,6 +49,7 @@ const Carousel = () => {
               image={img}
               alt="Warehouse photos"
               objectPosition="center"
+              tw="w-full"
             />
           </SwiperSlide>
         )
