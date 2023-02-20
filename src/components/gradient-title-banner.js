@@ -26,10 +26,8 @@ const GradientTitleBanner = () => {
 
       <div tw="absolute inset-0 flex items-center">
         <div tw="container my-20 relative">
-          <HeroTitle tw="mix-blend-screen">Fulfill Your Dreams</HeroTitle>
-          <HeroTitle tw="absolute top-0 opacity-30">
-            Fulfill Your Dreams
-          </HeroTitle>
+          <HeroTitle tw="mix-blend-screen">Deliver More</HeroTitle>
+          <HeroTitle tw="absolute top-0 opacity-30">Deliver More</HeroTitle>
 
           <HeroSubtitle tw="mb-14">
             Let us handle the shipments so you can deliver the best to your
