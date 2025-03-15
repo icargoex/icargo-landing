@@ -1,11 +1,9 @@
 import React, { useEffect } from "react"
 import tw, { styled } from "twin.macro"
 
-import Button from "./button"
-
 import { Gradient } from "../utils/gradient"
 
-const GradientTitleBanner = () => {
+const GradientTitleBanner = ({ hideContent = false }) => {
   useEffect(() => {
     // Create your instance
     const gradient = new Gradient()
@@ -16,7 +14,7 @@ const GradientTitleBanner = () => {
     return () => {
       gradient.disconnect()
     }
-  })
+  }, [])
 
   return (
     <>
@@ -24,22 +22,19 @@ const GradientTitleBanner = () => {
         <canvas id="gradient-canvas" data-transition-in />
       </CanvasWrapper>
 
-      <div tw="absolute inset-0 flex items-center">
-        <div tw="container my-20 relative">
-          <HeroTitle tw="mix-blend-screen">Deliver More</HeroTitle>
-          <HeroTitle tw="absolute top-0 opacity-30">Deliver More</HeroTitle>
+      {!hideContent && (
+        <div tw="absolute inset-0 flex items-center">
+          <div tw="container my-20 relative">
+            <HeroTitle tw="mix-blend-screen">Deliver More</HeroTitle>
+            <HeroTitle tw="absolute top-0 opacity-30">Deliver More</HeroTitle>
 
-          <HeroSubtitle tw="mb-14">
-            Let us handle the shipments so you can deliver the best to your
-            customers
-          </HeroSubtitle>
-
-          <Button
-            title="Talk To An Expert"
-            to="mailto:info@icargoex.com?subject=Request For Quote"
-          />
+            <HeroSubtitle tw="mb-14">
+              Let us handle the shipments so you can deliver the best to your
+              customers
+            </HeroSubtitle>
+          </div>
         </div>
-      </div>
+      )}
     </>
   )
 }
