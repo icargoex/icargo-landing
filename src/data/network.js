@@ -1,5 +1,23 @@
 const data = [
   {
+    code: "LL-FL",
+    label: "LL",
+    size: 80000,
+    contact: [],
+    address: "3002025 W Memorial Bivd, Suits",
+    position: [77, 83],
+    cardOffset: [-300, -200],
+  },
+  {
+    code: "SAV-GA",
+    label: "SAV",
+    size: 200000,
+    contact: [],
+    address: "101 Feldspar Dr.",
+    position: [78, 67],
+    cardOffset: [-550, 0],
+  },
+  {
     code: "ND-CA",
     label: "LA",
     size: 120000,
@@ -59,15 +77,6 @@ const data = [
     ],
     position: [74, 68],
     cardOffset: [-800, 0],
-  },
-  {
-    code: "SAV-GA",
-    label: "SAV",
-    size: 200000,
-    contact: [],
-    address: "Coming August 1, 2023",
-    position: [78, 67],
-    cardOffset: [-550, 0],
   },
   {
     code: "NL-TX",
