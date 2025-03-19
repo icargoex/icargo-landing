@@ -50,7 +50,7 @@ const ModernHero = () => {
                 <StatText>US Coverage</StatText>
               </StatItem>
               <StatItem>
-                <StatNumber>20</StatNumber>
+                <StatNumber>10</StatNumber>
                 <StatText>Fulfillment Centers</StatText>
               </StatItem>
             </HeroStats>

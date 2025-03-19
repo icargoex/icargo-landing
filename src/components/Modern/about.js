@@ -17,23 +17,28 @@ const AboutSection = () => {
 
           <div tw="max-w-4xl mx-auto">
             <Paragraph>
-              Established in 2018 and headquartered in Atlanta Georgia, iCargoEx
-              has quickly emerged as a major player of e-commerce fulfillment
-              center with warehouses and operations in seven regions in the U.S.
-              and Mexico including Atlanta, New Jersey, Houston, Salt Lake City,
-              Sacramento, Los Angeles, and Tecate, BC Mexico.
+              Headquartered in Atlanta Georgia, iCargoEx has emerged as a major
+              player of e-commerce fulfillment services with warehouses and
+              operations across the U.S. and Mexico including Atlanta, Tampa,
+              New Jersey, Houston, Los Angeles, Sacramento, Salt Lake City,
+              Tecate MX and Mexico City.
             </Paragraph>
 
             <Paragraph>
               We have been focused on serving e-commerce sellers on Amazon,
-              Walmart, Wayfair, eBay, and Chewy platforms with support by our{" "}
+              Walmart, Wayfair, eBay, and Chewy platforms with support by our
               <Highlight>Dynamic Logistics Platform</Highlight> which enables
               customers to optimize their fulfillment strategies and resources
-              on a single system. We specialize in handling large items ranging
-              from furniture to e-bike. With a professional service team in
-              China, we're able to provide door to door logistics solutions from
-              China, Vietnam, and Thailand to all major ports and inland
-              locations in the U.S.
+              on a single system. We specialize in SFP accounts and handling
+              large items ranging from furniture, ebike, gun safe, to tractor.
+              With a professional service team in Mexico & China, we're able to
+              provide cross border and door to door logistics solutions from/to
+              China, Mexico, and the U.S.A. Established in 2018 and
+              headquartered in Atlanta Georgia, iCargoEx has quickly emerged as
+              a major player of e-commerce fulfillment center with warehouses
+              and operations in seven regions in the U.S. and Mexico including
+              Atlanta, New Jersey, Houston, Salt Lake City, Sacramento, Los
+              Angeles, and Tecate, BC Mexico.
             </Paragraph>
           </div>
         </motion.div>

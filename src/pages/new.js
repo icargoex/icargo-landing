@@ -15,6 +15,7 @@ import Stats from "../components/Modern/stats"
 import AboutSection from "../components/Modern/about"
 import NetworkSection from "../components/Modern/network"
 import TestimonialSection from "../components/Modern/testimonials"
+import TeamSection from "../components/Modern/team"
 import FinalCta from "../components/Modern/final-cta"
 
 const NewLandingPage = () => {
@@ -38,6 +39,9 @@ const NewLandingPage = () => {
 
       {/* Testimonials */}
       <TestimonialSection />
+
+      {/* Team Section */}
+      <TeamSection />
 
       {/* Supercharge CTA + Carousel */}
       <FinalCta />
