@@ -20,7 +20,7 @@ const Stats = () => {
           <StatCard
             icon={<FaWarehouse />}
             title="Fulfillment Centers"
-            value="20"
+            value="10"
             description="e-commerce fulfillment centers strategically located in the U.S. and Mexico"
             delay={0.1}
           />
