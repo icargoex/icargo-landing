@@ -1,6 +1,6 @@
 import * as React from "react"
-import { css, styled } from "twin.macro"
-import { StaticImage } from "gatsby-plugin-image"
+import tw, { styled } from "twin.macro"
+import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -25,6 +25,15 @@ const LandingPage = () => {
     <Layout>
       <Seo title="iCargoEx - Professional E-commerce Fulfillment Solutions" />
 
+      {/* Hiring Banner */}
+      <HiringBanner>
+        <div tw="container mx-auto text-center py-3">
+          <Link to="/careers" tw="text-white font-bold hover:underline">
+            We're Hiring! Join our team and help shape the future of logistics.
+          </Link>
+        </div>
+      </HiringBanner>
+
       {/* Hero Section */}
       <ModernHero />
 
@@ -48,5 +57,10 @@ const LandingPage = () => {
     </Layout>
   )
 }
+
+// Styled Components
+const HiringBanner = styled.div`
+  ${tw`bg-yellow-500 py-2 sticky top-0 z-50`}
+`
 
 export default LandingPage
