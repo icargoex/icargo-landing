@@ -26,13 +26,13 @@ const LandingPage = () => {
       <Seo title="iCargoEx - Professional E-commerce Fulfillment Solutions" />
 
       {/* Hiring Banner */}
-      <HiringBanner>
+      {/* <HiringBanner>
         <div tw="container mx-auto text-center py-3">
           <Link to="/careers" tw="text-white font-bold hover:underline">
             We're Hiring! Join our team and help shape the future of logistics.
           </Link>
         </div>
-      </HiringBanner>
+      </HiringBanner> */}
 
       {/* Hero Section */}
       <ModernHero />
