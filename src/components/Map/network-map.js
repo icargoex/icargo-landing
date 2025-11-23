@@ -72,6 +72,7 @@ const BgImg = styled.img`
 `
 
 const MapOverlay = styled.div`
+  overflow: hidden;
   position: absolute;
   top: 0;
   left: 0;

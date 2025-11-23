@@ -79,7 +79,7 @@ const GradientWrapper = styled.div`
 `
 
 const ContentOverlay = styled.div`
-  ${tw`relative z-10 flex flex-col md:py-16 lg:py-28 lg:flex-row items-center h-full container`}
+  ${tw`relative z-10 flex flex-col py-8 md:py-16 lg:py-28 lg:flex-row items-center h-full container`}
 `
 
 const HeroContent = styled.div`
