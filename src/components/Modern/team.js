@@ -100,7 +100,7 @@ const TeamMemberCard = ({ member, index }) => {
       transition={{ duration: 0.5, delay: index * 0.1 + 0.2 }}
     >
       <Card>
-        <div tw="overflow-hidden rounded-t-lg text-center">
+        <div tw="overflow-hidden rounded-t-lg text-center flex items-center justify-center">
           {member.imageComponent}
         </div>
         <CardContent>
