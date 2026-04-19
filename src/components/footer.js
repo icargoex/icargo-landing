@@ -36,9 +36,6 @@ const Footer = () => {
                 Network
               </Scroll>
             </li>
-            <li>
-              <a href="http://icargoex.com/login">Login</a>
-            </li>
           </ul>
 
           <p>

@@ -26,7 +26,7 @@ const AboutSection = () => {
 
             <Paragraph>
               We have been focused on serving e-commerce sellers on Amazon,
-              Walmart, Wayfair, eBay, and Chewy platforms with support by our
+              Walmart, Wayfair, eBay, and Chewy platforms with support by our{" "}
               <Highlight>Dynamic Logistics Platform</Highlight> which enables
               customers to optimize their fulfillment strategies and resources
               on a single system. We specialize in SFP accounts and handling
