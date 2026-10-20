@@ -26,7 +26,7 @@ const ModernHero = () => {
             </HeroTitle>
             <HeroSubtitle>
               Let us handle your logistics so you can focus on growing your
-              business. Complete e-commerce fulfillment with nationwide
+              business. Complete b2c and b2b fulfillment with nationwide
               coverage.
             </HeroSubtitle>
             <div tw="flex flex-col sm:flex-row gap-4 mt-8">

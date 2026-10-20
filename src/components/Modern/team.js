@@ -15,10 +15,11 @@ const TeamSection = () => {
           src="../../images/team/team1.jpg"
           alt="Ken Chen"
           placeholder="blurred"
-          width={300}
-          height={300}
+          layout="fullWidth"
+          aspectRatio={1}
+          transformOptions={{ cropFocus: "center" }}
           objectFit="cover"
-          objectPosition="center"
+          objectPosition="center center"
           fallback={<div tw="bg-blue-300 h-full w-full" />}
         />
       ),
@@ -33,10 +34,11 @@ const TeamSection = () => {
           src="../../images/team/team2.png"
           alt="Emma Wu"
           placeholder="blurred"
-          width={300}
-          height={300}
+          layout="fullWidth"
+          aspectRatio={1}
+          transformOptions={{ cropFocus: "north" }}
           objectFit="cover"
-          objectPosition="center"
+          objectPosition="center top"
           fallback={<div tw="bg-blue-300 h-full w-full" />}
         />
       ),
@@ -51,10 +53,11 @@ const TeamSection = () => {
           src="../../images/team/team3.png"
           alt="Emma Zhuang"
           placeholder="blurred"
-          width={300}
-          height={300}
+          layout="fullWidth"
+          aspectRatio={1}
+          transformOptions={{ cropFocus: "north" }}
           objectFit="cover"
-          objectPosition="center"
+          objectPosition="center top"
           fallback={<div tw="bg-blue-300 h-full w-full" />}
         />
       ),
@@ -100,9 +103,9 @@ const TeamMemberCard = ({ member, index }) => {
       transition={{ duration: 0.5, delay: index * 0.1 + 0.2 }}
     >
       <Card>
-        <div tw="overflow-hidden rounded-t-lg text-center flex items-center justify-center">
+        <ImageWrap>
           {member.imageComponent}
-        </div>
+        </ImageWrap>
         <CardContent>
           <h3 tw="font-bold text-xl text-blue-800">{member.name}</h3>
           <p tw="text-yellow-500 font-medium text-sm mb-3">{member.title}</p>
@@ -132,6 +135,24 @@ const Card = styled.div`
   &:hover {
     transform: translateY(-5px);
     ${tw`shadow-xl`}
+  }
+`
+
+const ImageWrap = styled.div`
+  ${tw`relative w-full overflow-hidden rounded-t-lg`}
+  aspect-ratio: 1 / 1;
+
+  @supports not (aspect-ratio: 1 / 1) {
+    padding-top: 100%;
+  }
+
+  .gatsby-image-wrapper,
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 `
 

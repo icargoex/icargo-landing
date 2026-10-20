@@ -29,8 +29,9 @@ const GradientTitleBanner = ({ hideContent = false }) => {
             <HeroTitle tw="absolute top-0 opacity-30">Deliver More</HeroTitle>
 
             <HeroSubtitle tw="mb-14">
-              Let us handle the shipments so you can deliver the best to your
-              customers
+              Let us handle your logistics so you can focus on growing your
+              business. Complete b2c and b2b fulfillment with nationwide
+              coverage.
             </HeroSubtitle>
           </div>
         </div>
