@@ -6,11 +6,6 @@ const LogoGrid = () => {
   return (
     <GridContainer>
       <StaticImage
-        src="../images/logos/amazon.png"
-        objectFit="contain"
-        alt="Amazon logo"
-      />
-      <StaticImage
         src="../images/logos/ebay.png"
         objectFit="contain"
         alt="Ebay logo"

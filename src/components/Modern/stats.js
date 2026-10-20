@@ -13,7 +13,7 @@ const Stats = () => {
             icon={<FaGlobeAmericas />}
             title="Coverage"
             value="97%"
-            description="of continental U.S.A covered for Prime orders by FedEx, UPS, and other major LTL carriers"
+            description="of continental U.S.A covered by FedEx, UPS, and other major LTL carriers"
             delay={0}
           />
 

@@ -52,7 +52,7 @@ const NetworkFeatures = () => {
     {
       title: "Multi-Channel Support",
       description:
-        "Integrated solutions for Amazon, Walmart, Wayfair, eBay, Chewy and more",
+        "Integrated solutions for Walmart, Wayfair, eBay, Chewy and more",
     },
     {
       title: "Large Item Expertise",
