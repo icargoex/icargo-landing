@@ -1,0 +1,6 @@
+# Static site. Publish the repository root and do not run a build.
+# netlify.toml overrides the Netlify UI. An empty command clears a build
+# command saved there (this repo previously built with Gatsby into `public`).
+[build]
+  publish = "."
+  command = ""
