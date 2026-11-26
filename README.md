@@ -16,4 +16,4 @@ Open http://localhost:8080/.
 
 Production is hosted on Netlify (site `beautiful-choux-24722a`). `www.icargoex.com` CNAMEs to that site, and `icargoex.com` points at Netlify. GitHub Pages is not enabled, and this repo has no GitHub Actions workflow.
 
-`netlify.toml` publishes the repository root with an empty build command so Netlify serves these files as-is. That empty command overrides a Gatsby build command if one is still saved in the Netlify UI.
+`netlify.toml` copies `index.html`, `img/`, and `video/` into `public/` and publishes that directory. The copy is there because this Netlify site still has the Essential Gatsby plugin, which rejects a publish directory of the repository root. `NETLIFY_SKIP_GATSBY_BUILD_PLUGIN=true` tells that plugin to skip its Gatsby step. The build command also overrides a Gatsby build command if one is still saved in the Netlify UI.

@@ -54,6 +54,9 @@ typings/
 # dotenv environment variable files
 .env*
 
+# Netlify publish output, copied from the repo root at deploy time
+public/
+
 # Mac files
 .DS_Store
 __MACOSX/

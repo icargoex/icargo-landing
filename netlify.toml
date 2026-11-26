@@ -1,6 +1,10 @@
-# Static site. Publish the repository root and do not run a build.
-# netlify.toml overrides the Netlify UI. An empty command clears a build
-# command saved there (this repo previously built with Gatsby into `public`).
+# Static files live at the repository root (index.html, img/, video/).
+# This Netlify site still runs the Essential Gatsby plugin (@netlify/plugin-gatsby).
+# That plugin fails the build when the publish directory is the repo root, so the
+# deploy copies the site into public/ and skips the plugin's Gatsby step.
 [build]
-  publish = "."
-  command = ""
+  publish = "public"
+  command = "rm -rf public && mkdir public && cp -a index.html img video public/"
+
+[build.environment]
+  NETLIFY_SKIP_GATSBY_BUILD_PLUGIN = "true"
