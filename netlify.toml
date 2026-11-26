@@ -1,0 +1,10 @@
+# Static files live at the repository root (index.html, img/, video/).
+# This Netlify site still runs the Essential Gatsby plugin (@netlify/plugin-gatsby).
+# That plugin fails the build when the publish directory is the repo root, so the
+# deploy copies the site into public/ and skips the plugin's Gatsby step.
+[build]
+  publish = "public"
+  command = "rm -rf public && mkdir public && cp -a index.html img video public/"
+
+[build.environment]
+  NETLIFY_SKIP_GATSBY_BUILD_PLUGIN = "true"

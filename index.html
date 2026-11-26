@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>iCargoEx Fulfillment</title>
+<meta name="description" content="iCargoEx - Professional e-commerce fulfillment, returns and cross-border logistics across the U.S. and Mexico.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* VOICE the current iCargoEx.com, kept: confident, plain B2B copy
+   IDEA same site, same sections and look, refreshed facts plus a new Returns section
+   PICTURE the existing blue-and-amber gradient hero with stat cards; returns shown as a four-step flow
+   COLOUR white and gray-50 bands, iCargoEx blue #1e40af, amber #fbbf24 buttons (as on the live site)
+   TYPE Manrope throughout (live site font)
+   LAYOUT live site order: hero, about, network (blue), services, returns, tours, clients, team, CTA, footer */
+:root{color-scheme:light;--blue:#1e40af;--blue9:#1e3a8a;--amber:#fbbf24;--ink:#111827;--mute:#4b5563;--gray:#f9fafb;--line:#e5e7eb}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:#fff;color:var(--ink);font:16px/1.65 Manrope,system-ui,sans-serif;overflow-x:clip}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{margin:0;line-height:1.15;letter-spacing:-.01em;text-wrap:balance}
+h2{font-size:clamp(28px,3.4vw,38px);font-weight:700;color:var(--blue)}
+h3{font-size:20px;font-weight:600;color:var(--blue)}
+p{margin:0}
+.band{padding:clamp(48px,6vw,88px) max(5vw,16px)}
+.wrap{max-width:1200px;margin:0 auto}
+.center{text-align:center}
+.sub{color:var(--mute);font-size:17px;max-width:680px;margin:14px auto 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:4px;font-weight:700;text-decoration:none;border:0}
+.btn.amber{background:var(--amber);color:#000}
+.btn.blue{background:var(--blue);color:#fff}
+.btn.line{border:2px solid #fff;color:#fff}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+/* header */
+header{position:sticky;top:0;z-index:10;background:#fff;box-shadow:0 1px 0 var(--line)}
+.nav{max-width:1200px;margin:0 auto;padding:12px max(5vw,16px);display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.nav img{height:24px;width:auto}
+.nav nav{display:flex;gap:22px;margin-left:auto;font-size:15px;font-weight:500;flex-wrap:wrap}
+.nav nav a{text-decoration:none;color:var(--blue);padding:6px 0;flex:none}
+.nav .btn{min-height:40px;padding:0 16px;font-size:15px}
+/* hero: blue and amber field as on the live site */
+.hero{position:relative;color:#fff;background:radial-gradient(ellipse 55% 75% at 78% 30%,#e9a93a 0%,rgba(233,169,58,.85) 30%,rgba(233,169,58,0) 70%),radial-gradient(ellipse 60% 60% at 15% 85%,#d99a33 0%,rgba(217,154,51,0) 60%),linear-gradient(120deg,#1e3a8a 0%,#2647b8 45%,#3555c4 100%)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:40px;align-items:center;padding:clamp(56px,8vw,110px) max(5vw,16px)}
+.hero h1{font-size:clamp(40px,5.6vw,64px);font-weight:800}
+.hero h1 span{color:var(--amber)}
+.hero p{font-size:20px;color:#e5e7eb;margin:20px 0 30px;max-width:30em}
+.ctas{display:flex;gap:14px;flex-wrap:wrap}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.cards div{background:rgba(255,255,255,.95);color:var(--blue);border-radius:8px;padding:22px 16px;text-align:center;box-shadow:0 10px 30px rgba(15,23,42,.18)}
+.cards b{display:block;font-size:clamp(30px,3.4vw,40px);font-weight:800;line-height:1.1}
+.cards span{font-size:14px;color:var(--mute)}
+/* about */
+.about{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:48px;align-items:center;margin-top:8px}
+.about p+p{margin-top:16px}
+.about img{border-radius:10px;width:100%;aspect-ratio:4/3;object-fit:cover}
+.plat{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.plat span{font-weight:700;font-size:17px;padding:10px 18px;border:1px solid var(--line);border-radius:6px;background:#fff}
+.stats{background:var(--gray)}
+.stats .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px;text-align:center}
+.stats small{font-weight:700;letter-spacing:.04em;color:var(--mute);font-size:13px}
+.stats b{display:block;font-size:clamp(28px,2.4vw,40px);font-weight:800;color:var(--blue);line-height:1.2;margin:4px 0}
+.stats p{color:var(--mute);font-size:15px;max-width:30ch;margin:0 auto}
+.stats p a{color:var(--blue)}
+/* network */
+.net{background:var(--blue);color:#fff}
+.net h2,.net h3{color:#fff}
+.net .sub{color:#dbeafe}
+.region{margin-top:34px}
+.region h3{font-size:15px;color:#bfdbfe;border-bottom:1px solid rgba(255,255,255,.2);padding-bottom:8px;margin-bottom:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+.site{background:#fff;color:var(--ink);border-radius:8px;padding:18px;display:flex;flex-direction:column;gap:7px}
+.site .top{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.site h4{margin:0;font-size:18px;font-weight:700;color:var(--blue)}
+.code{font-weight:800;font-size:12px;background:var(--amber);color:#000;border-radius:4px;padding:3px 7px;white-space:nowrap}
+.sq{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:700;white-space:nowrap}
+.meter{flex:1;height:7px;border-radius:4px;background:var(--line);overflow:hidden}
+.meter i{display:block;height:100%;background:var(--blue)}
+.addr{font-size:14px;color:var(--mute)}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tags span{font-size:12.5px;background:#eff6ff;color:var(--blue9);border-radius:999px;padding:2px 10px}
+.tel{font-size:14px;font-weight:700;margin-top:auto;padding-top:4px}
+.feat{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:40px}
+.feat div{background:rgba(255,255,255,.1);border-radius:8px;padding:22px}
+.feat p{color:#dbeafe;font-size:15px;margin-top:8px}
+/* services */
+.svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin-top:36px}
+.svc div{border:1px solid var(--line);border-radius:8px;padding:22px;background:#fff}
+.svc p{color:var(--mute);font-size:15px;margin-top:8px}
+/* returns */
+.ret{background:var(--gray)}
+.flow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin-top:40px;counter-reset:s}
+.flow div{position:relative;padding:0 18px 0 0}
+.flow div::before{counter-increment:s;content:counter(s);display:flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:50%;background:var(--blue);color:#fff;font-weight:800;font-size:18px;margin-bottom:14px;position:relative;z-index:1}
+.flow div::after{content:"";position:absolute;top:22px;left:46px;right:0;height:3px;background:var(--amber)}
+.flow div:last-child::after{display:none}
+.flow p{color:var(--mute);font-size:15px;margin-top:6px}
+.retgrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;margin-top:52px;align-items:start}
+.retgrid ul{margin:16px 0 0;padding:0;list-style:none;display:grid;gap:12px}
+.retgrid li{padding-left:28px;position:relative}
+.retgrid li::before{content:"";position:absolute;left:0;top:.45em;width:14px;height:14px;border-radius:3px;background:var(--amber)}
+.retgrid li b{color:var(--blue)}
+.retgrid img{border-radius:10px;width:100%;aspect-ratio:4/3;object-fit:cover}
+.note{margin-top:18px;background:#fff;border-left:4px solid var(--blue);padding:14px 16px;font-size:15px;border-radius:0 6px 6px 0}
+.rc{background:#fff}
+.rchead{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:40px;align-items:end}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.badges span{background:var(--blue9);color:#fff;font-size:12.5px;font-weight:700;border-radius:4px;padding:4px 10px}
+.rc h2{font-size:clamp(30px,3.8vw,44px)}
+.rc h2 span{color:#ea7317}
+.rc .lead{color:var(--mute);font-size:17px;margin-top:14px}
+.four{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;margin-top:40px}
+.four div{border-top:3px solid #ea7317;padding-top:12px}
+.four p{color:var(--mute);font-size:15px;margin-top:6px}
+.chips{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:16px}
+.chips span{border:1px solid var(--line);border-radius:6px;padding:12px 14px;font-weight:600;font-size:15px;background:var(--gray)}
+.contactbox{background:var(--blue9);color:#fff;border-radius:10px;padding:26px;display:grid;gap:16px}
+.contactbox h3{color:#fff}
+.contactbox .two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.contactbox small{color:#bfdbfe;font-size:13px;display:block}
+.contactbox b{font-size:18px;display:block;margin:2px 0}
+.contactbox p{font-size:14px;color:#dbeafe}
+.ap{margin-top:56px;background:var(--gray);border-radius:12px;padding:clamp(22px,3vw,40px)}
+.ap .kick{color:#ea7317;font-weight:800;font-size:13px;letter-spacing:.04em}
+.ap .cert{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.ap .cert span{font-size:12.5px;font-weight:700;border:1px solid var(--blue);color:var(--blue);border-radius:4px;padding:3px 9px;background:#fff}
+.cols2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;margin-top:14px}
+.cols2 div,.four.w div{background:#fff;border-radius:8px;padding:16px}
+.cols2 p{color:var(--mute);font-size:14.5px;margin-top:4px}
+.four.w{margin-top:14px;gap:16px}
+.four.w div{border-top:3px solid var(--blue)}
+.ap h4{margin:34px 0 0;font-size:18px;color:var(--blue)}
+.nums{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:22px;text-align:center}
+.nums b{display:block;font-size:34px;font-weight:800;color:#ea7317;line-height:1.1}
+.nums span{font-size:14px;color:var(--mute)}
+.pk{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:14px}
+.pk figure{margin:0}
+.pk img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px}
+.pk figcaption{font-size:14px;font-weight:600;margin-top:6px}
+.apps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-top:14px}
+.apps div{background:#fff;border-radius:6px;padding:12px 14px;font-size:14px;color:var(--mute)}
+.apps b{display:block;color:var(--ink);font-size:15px}
+@media(max-width:900px){.rchead,.cols2{grid-template-columns:minmax(0,1fr)}.four,.nums{grid-template-columns:repeat(2,minmax(0,1fr))}.chips,.pk{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.contactbox .two{grid-template-columns:minmax(0,1fr)}}
+/* tours */
+.vids{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:20px;margin-top:34px}
+.vids figure{margin:0}
+.vids video{width:100%;aspect-ratio:16/9;border-radius:8px;background:#000}
+.vids figcaption{margin-top:10px;font-size:15px;color:var(--mute)}
+.vids figcaption b{display:block;color:var(--blue);font-size:17px}
+/* clients */
+.quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;margin-top:36px}
+.quotes figure{margin:0;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.06);border-radius:8px;padding:28px;display:flex;flex-direction:column;gap:14px}
+.quotes h3{font-size:18px}
+.quotes blockquote{margin:0;color:#374151}
+.quotes figcaption{font-weight:700;color:var(--blue);margin-top:auto}
+/* team */
+.team{background:var(--gray)}
+.people{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;margin-top:36px}
+.people>div{background:var(--gray);border-radius:8px;padding:26px}
+.people .head{display:flex;gap:16px;align-items:center;margin-bottom:14px}
+.people .head img{width:96px;height:96px;border-radius:50%;object-fit:cover;flex:none;border:3px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.12)}
+.people .head .role{margin:2px 0 0}
+.people .role{color:var(--mute);font-weight:600;font-size:15px;margin:2px 0 12px}
+.people p{font-size:15px;color:#374151}
+/* cta */
+.cta{background:linear-gradient(#1e40af,#1e3a8a);color:#fff}
+.cta h2{color:#fff}
+.cta .sub{color:#dbeafe}
+.gal{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:40px}
+.gal img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px}
+.cta .cap{color:#dbeafe;font-size:15px;margin-top:14px}
+footer{padding:44px max(5vw,16px);font-size:14px;color:var(--mute)}
+footer .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:28px}
+footer h4{margin:0 0 8px;color:var(--ink);font-size:15px}
+footer a{text-decoration:none;display:block;padding:2px 0}
+.copy{border-top:1px solid var(--line);margin-top:30px;padding-top:16px;font-size:13px}
+@media(max-width:900px){.hero .wrap,.about,.retgrid{grid-template-columns:minmax(0,1fr)}.flow{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:28px}.flow div:nth-child(2)::after{display:none}.gal{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.nav nav{order:3;width:100%;margin-left:0;gap:18px;overflow-x:auto;flex-wrap:nowrap}.nav .btn{margin-left:auto}.flow{grid-template-columns:minmax(0,1fr)}.flow div::after{display:none}.hero p{font-size:17px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header>
+  <div class="nav">
+    <a href="#top" aria-label="iCargoEx home"><img src="img/logo.png" alt="iCargoEx"></a>
+    <nav aria-label="Main"><a href="#about">About</a><a href="#network">Network</a><a href="#services">Services</a><a href="#returns">Returns</a><a href="#repair">Repair Center</a><a href="#tours">Tours</a><a href="http://icargoex.com/login">Login</a></nav>
+    <a class="btn amber" href="mailto:info@icargoex.com?subject=Request%20For%20Quote">Let's Talk</a>
+  </div>
+</header>
+
+<section class="hero" id="top"><div class="wrap">
+  <div>
+    <h1>Professional <span>Fulfillment</span> Solutions</h1>
+    <p>Let us handle your logistics so you can focus on growing your business. Complete B2C and B2B fulfillment and returns with nationwide coverage.</p>
+    <div class="ctas"><a class="btn amber" href="mailto:info@icargoex.com?subject=Request%20For%20Quote">Talk To An Expert</a><a class="btn blue" href="#about">Learn More</a></div>
+  </div>
+  <div class="cards" id="herocards"></div>
+</div></section>
+
+<section class="band" id="about"><div class="wrap">
+  <h2 class="center">About iCargoEx Inc.</h2>
+  <div class="about" style="margin-top:36px">
+    <div>
+      <p>Established in 2018 and headquartered in Atlanta, Georgia, iCargoEx has emerged as a major player in 3PL fulfillment services, with warehouses and operations across the U.S. and Mexico including Los Angeles, Sacramento, Atlanta &amp; Savannah GA, New Jersey, Chicago, Houston TX, Tampa FL, Tecate MX and Mexico City.</p>
+      <p>We have been focused on serving our B2B and B2C customers to optimize their fulfillment, returns and distribution strategies and resources on a single system. We specialize in handling large items ranging from furniture, e-bikes and gun safes to industrial products and components. With a professional service team in the U.S., Mexico &amp; China, we're able to provide cross-border and door-to-door logistics solutions in the U.S. and Mexico.</p>
+      <h3 style="margin-top:26px">Trusted By Leading E-commerce Platforms</h3>
+      <div class="plat"><span>eBay</span><span>Walmart</span><span>Wayfair</span><span>Chewy</span></div>
+    </div>
+    <img src="img/atl-aerial2.jpg" alt="Aerial view of the iCargoEx Atlanta fulfillment center and headquarters">
+  </div>
+</div></section>
+
+<section class="band stats"><div class="wrap" id="stats"></div></section>
+
+<section class="band net" id="network"><div class="wrap">
+  <h2 class="center">Our Network</h2>
+  <p class="sub center">With strategically located fulfillment centers across North America, we provide comprehensive logistics coverage to optimize your e-commerce operations.</p>
+  <div id="regions"></div>
+  <div class="feat">
+    <div><h3>Strategic Locations</h3><p>Fulfillment centers positioned to maximize delivery speed and reduce shipping costs</p></div>
+    <div><h3>Multi-Channel Support</h3><p>Integrated solutions for Walmart, Wayfair, eBay, Chewy and more</p></div>
+    <div><h3>Large Item Expertise</h3><p>Specialized in furniture, e-bikes and other large items that require special handling</p></div>
+    <div><h3>International Reach</h3><p>Door-to-door logistics from Asia to all major US ports and inland locations, and cross-border into Mexico</p></div>
+  </div>
+</div></section>
+
+<section class="band" id="services"><div class="wrap">
+  <h2 class="center">Our Services</h2>
+  <p class="sub center">Drayage, storage, small parcel shipping and LTL/FTL distribution, from the port to your customer's door.</p>
+  <div class="svc" id="svc"></div>
+</div></section>
+
+<section class="band ret" id="returns"><div class="wrap">
+  <h2 class="center">Returns &amp; Return Services</h2>
+  <p class="sub center">Turn returns back into sellable inventory. We receive, inspect, repair and restock returned goods at our U.S. warehouses, so you recover more value and your customers get faster refunds and replacements.</p>
+  <div class="flow">
+    <div><h3>Receive</h3><p>Customer and carrier returns are received, counted and logged against your order or RMA, with photos of any damage.</p></div>
+    <div><h3>Inspect &amp; sort</h3><p>Each item is checked and sorted as resellable, needs repair or rework, or not resellable, following your rules.</p></div>
+    <div><h3>Repair &amp; repack</h3><p>We replace batteries, parts and accessories you supply, repackage and relabel, so items are ready to sell again.</p></div>
+    <div><h3>Restock or ship</h3><p>Good stock goes back on the shelf for your next order. Other items ship back to you, to a vendor, or for recycling as you direct.</p></div>
+  </div>
+  <div class="retgrid">
+    <div>
+      <h3>What we handle</h3>
+      <ul>
+        <li><b>Receiving returns or rework shipments</b> at our California border processing warehouse and Mexico border factory, for B2C and B2B customers</li>
+        <li><b>Inspection and grading</b> with photos, so you can decide what to resell, repair or write off</li>
+        <li><b>Rework and battery replacement</b>: we open original cartons, swap defective batteries or parts for the replacements you send, and reseal</li>
+        <li><b>Repackaging</b> with industry-leading <a href="#repair">AIR-PAQ</a> air-column solutions, and <b>relabeling</b>, to get returned items back to sellable condition</li>
+        <li><b>Spare parts fulfillment</b> to your customers, so issues are fixed without a full return</li>
+        <li><b>Product repair and refurbishment</b> at the IMMEX-certified Mexus Repair Center in Tijuana, for larger repair programs (<a href="#repair">see below</a>)</li>
+        <li><b>Return to vendor or recycling</b> for items that can't be resold, as you direct</li>
+      </ul>
+      <p class="note">Returns are handled at our U.S. fulfillment centers, including Fontana (Los Angeles), Woodland (Sacramento) and Atlanta. Tell us your volume and product type for a quote.</p>
+    </div>
+    <img src="img/mexus-factory.jpg" alt="Mexus border factory and processing facility in Mexico">
+  </div>
+</div></section>
+
+<section class="band rc" id="repair"><div class="wrap">
+  <div class="rchead">
+    <div>
+      <div class="badges"><span>IMMEX Certified</span><span>USMCA Nearshore Manufacturing</span><span>Tijuana, B.C.</span></div>
+      <h2>U.S.–Mexico Border <span>Product Refurbishment and Repair Services</span></h2>
+      <p class="lead">Fast, professional, low-cost repair and refurbishment for U.S. fulfillment warehouses and cross-border sellers, through our sister company Mexus. Returns and defective goods don't have to sit in your warehouse, go back to China, or be sold off at a loss. Send them to the Mexus industrial park in Tijuana, right on the U.S.–Mexico border, for repair, refurbishment, relabeling and repackaging, then back on sale from a border warehouse or a Los Angeles warehouse.</p>
+    </div>
+    <div class="contactbox">
+      <h3>Contact us for a free assessment</h3>
+      <div class="two">
+        <div><small>Executive Partner · Mexus</small><b>Toby Larocque</b><p>toby@mexus.me<br>805-757-4999</p></div>
+        <div><small>Senior Sales Manager · Mexus</small><b>Erik Larsen</b><p>erik@mexus.me<br>801-836-7003</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="four">
+    <div><h3>Fast</h3><p>Next to Southern California's warehouse hub. Our own trucks cross the border, so turnaround is measured in days.</p></div>
+    <div><h3>Professional</h3><p>Our own factory and skilled technicians, with inspection, repair and refurbishment set up for each product.</p></div>
+    <div><h3>Low cost</h3><p>Labor in Mexico costs less than in the U.S., and you skip the international freight back to China.</p></div>
+    <div><h3>Duty-free</h3><p>IMMEX certified: goods temporarily imported into Mexico pay no import duty or VAT.</p></div>
+  </div>
+  <h3 style="margin-top:40px">Repair services</h3>
+  <p style="color:var(--mute);margin-top:6px">Custom programs for any product: appliances, electronics, furniture and home goods, outdoor and sports, auto parts and more.</p>
+  <div class="chips"><span>Return inspection and grading</span><span>Functional repair · Parts replacement</span><span>Cosmetic refurbishment · Cleaning</span><span>Repackaging · Relabeling</span><span>Final QC · Photo reports</span><span>Back to U.S. stock · Ship to customers</span></div>
+
+  <div class="ap">
+    <div class="kick">ALLIANCE PARTNER · AIR-PAQ</div>
+    <h3 style="font-size:24px;margin-top:6px">No original box? Repaired products still arrive safe.</h3>
+    <p style="color:var(--mute);margin-top:8px;max-width:70ch">With our alliance partner AIR-PAQ (Shanghai), an air cushion packaging pioneer since 2003, repaired and refurbished products are packed in purpose-built air-column packaging, ready to go back into overseas warehouse stock or ship straight to your customers.</p>
+    <div class="cert"><span>ISO 9001</span><span>ISO 14000</span><span>REACH / RoHS</span><span>20+ years' experience</span><span>200+ patents worldwide</span></div>
+    <h4>The repair packaging problem</h4>
+    <div class="cols2">
+      <div><b>Original box is gone</b><p>Returns often arrive without their box; improvised bubble wrap is neither professional nor safe.</p></div>
+      <div><b>High damage rate</b><p>Cartons and foam fill can't properly protect screens, laptops and other precision products.</p></div>
+      <div><b>Limited storage space</b><p>Cartons and foam in many sizes take up a lot of warehouse space.</p></div>
+      <div><b>EPS foam isn't green</b><p>Foam is hard to recycle and doesn't meet ESG requirements.</p></div>
+    </div>
+    <h4>The AIR-PAQ air-column solution</h4>
+    <div class="four w">
+      <div><b>Less damage</b><p style="font-size:14.5px">Air columns absorb shocks in transit, so repaired products arrive safely.</p></div>
+      <div><b>Saves space</b><p style="font-size:14.5px">Stored flat: a stack takes about 1/10 the volume of cartons.</p></div>
+      <div><b>10-second inflation</b><p style="font-size:14.5px">A metal inflation gun on an air pump. No training needed.</p></div>
+      <div><b>Universal fit</b><p style="font-size:14.5px">One film design fits 13–15″ laptops, 27″ monitors and desktop towers.</p></div>
+    </div>
+    <div class="nums"><div><b>100%</b><span>recyclable</span></div><div><b>30%</b><span>lighter than foam</span></div><div><b>40%</b><span>lower transport carbon</span></div><div><b>0</b><span>EPS / EPE foam</span></div></div>
+    <h4>AIR-PAQ case studies</h4>
+    <div class="cols2">
+      <div><b>Dell laptop series</b><p>10–15% material savings, faster sampling, lower logistics and labor costs, 140 pallet-handling steps eliminated.</p></div>
+      <div><b>Huawei smartphones</b><p>Supports daily shipments of up to hundreds of thousands of units, with less warehouse space and transit damage.</p></div>
+    </div>
+    <h4>Packaging for appliances, electronics, furniture and home goods</h4>
+    <div class="apps">
+      <div><b>Electronics</b>Laptops, monitors, desktops</div>
+      <div><b>Large appliances</b>Fridges, air conditioners, TVs</div>
+      <div><b>Kitchen &amp; home appliances</b>Microwaves, rice cookers, water heaters, robot vacuums</div>
+      <div><b>Cabinet &amp; office furniture</b>Dressers, flat-pack, office chairs and cabinets</div>
+      <div><b>Mirrors · Frames</b>Round and floor mirrors, picture frames</div>
+      <div><b>Lighting · Outdoor</b>Lamps, ceiling lights, outdoor glass tables</div>
+      <div><b>E-commerce mailers</b>Patented AIR-PAQ Air Capsule: tear-open, zipper, waterproof, 40%+ less material, RecyClass Grade A, EU PPWR ready</div>
+    </div>
+    <div class="pk">
+      <figure><img src="img/pk-tv.jpg" alt="AIR-PAQ air-column protection for a TV" loading="lazy"><figcaption>TV protection</figcaption></figure>
+      <figure><img src="img/pk-ac.jpg" alt="AIR-PAQ packaging for an air-conditioner indoor unit" loading="lazy"><figcaption>Air-conditioner indoor unit</figcaption></figure>
+      <figure><img src="img/pk-microwave.jpg" alt="AIR-PAQ packaging for a microwave and rice cooker" loading="lazy"><figcaption>Microwave · Rice cooker</figcaption></figure>
+      <figure><img src="img/pk-cabinet.jpg" alt="AIR-PAQ packaging for cabinet furniture" loading="lazy"><figcaption>Cabinet furniture</figcaption></figure>
+      <figure><img src="img/pk-chair.jpg" alt="AIR-PAQ packaging for an office chair" loading="lazy"><figcaption>Office chair</figcaption></figure>
+      <figure><img src="img/pk-mirror.jpg" alt="AIR-PAQ packaging for a round mirror" loading="lazy"><figcaption>Round mirror</figcaption></figure>
+    </div>
+  </div>
+</div></section>
+
+<section class="band" id="tours"><div class="wrap">
+  <h2 class="center">iCargoEx DC Tours</h2>
+  <p class="sub center">Short tours of our selected fulfillment centers.</p>
+  <div class="vids">
+    <figure><video controls preload="metadata" playsinline poster="img/poster-atlanta.jpg" src="video/atlanta.mp4"></video><figcaption><b>Atlanta, GA (BC-GA)</b>175,000 sq ft headquarters facility</figcaption></figure>
+    <figure><video controls preload="metadata" playsinline poster="img/poster-fontana.jpg" src="video/fontana.mp4"></video><figcaption><b>Fontana, CA (ND-CA)</b>70,000 sq ft, in operation since October 2026</figcaption></figure>
+    <figure><video controls preload="metadata" playsinline poster="img/poster-woodland.jpg" src="video/woodland.mp4"></video><figcaption><b>Woodland, CA (WL-CA)</b>220,000 sq ft cross-dock, 61 loading docks</figcaption></figure>
+    <figure><video controls preload="metadata" playsinline poster="img/poster-houston.jpg" src="video/houston.mp4"></video><figcaption><b>Houston, TX (NL-TX)</b>130,000 sq ft on the I-610 North Loop</figcaption></figure>
+  </div>
+</div></section>
+
+<section class="band" style="background:var(--gray)"><div class="wrap">
+  <h2 class="center">What Our Clients Say</h2>
+  <p class="sub center">Don't just take our word for it. Here's what our clients have to say about our services.</p>
+  <div class="quotes">
+    <figure><h3>Mika Micky</h3><blockquote>We have been partnering with iCargoEx since the very beginning of our online business, when we launched our first product in 2018. They have been helping us in almost every aspect of our logistics from ocean freight to warehousing, customer returns, and spare parts fulfillment. We are very lucky to have such a partner that we can truly rely on.</blockquote><figcaption>Nicole Wang, Founder and CEO</figcaption></figure>
+    <figure><h3>BAi - Online Seller of Embroidery Machine</h3><blockquote>High cost, unreliable transit time, and various issues in last mile delivery had been the major obstacles affecting our sales performance before we were introduced to iCargoEx. iCargoEx provides us the most reliable and comprehensive LTL solutions. We're now capable of shipping our crated embroidery machines by selected LTL carriers from four of their warehouse locations with 90% delivery rate within 7 business days. The improvement in customer satisfaction and reduction in costs have played as key factors driving our sales growth.</blockquote><figcaption>Tony Gao, Founder &amp; CEO</figcaption></figure>
+  </div>
+</div></section>
+
+<section class="band team" id="team" style="background:#fff"><div class="wrap">
+  <h2 class="center">Our Leadership Team</h2>
+  <p class="sub center">Meet the experts behind our successful fulfillment operations. Our leadership team brings decades of experience in logistics, technology, and e-commerce to deliver exceptional service.</p>
+  <div class="people">
+    <div><div class="head"><img src="img/team-ken.jpg" alt="Ken Chen"><div><h3>Ken Chen</h3><div class="role">Founder &amp; President</div></div></div><p>Founder &amp; GM (2005-2017) of OlymTech China, a leading SaaS provider for the freight forwarding industry funded by IDG, Matrix and Yungi Venture, which merged with WWL &amp; Cainiao, the logistics division of Alibaba Group, in 2017. Before OlymTech, Ken served as director of business development and later as GM for Singlee Technology, a Hong Kong based banking system provider, in its NYC and Silicon Valley offices.</p></div>
+    <div><div class="head"><img src="img/team-emma-wu.jpg" alt="Emma Wu"><div><h3>Emma Wu</h3><div class="role">General Manager</div></div></div><p>Prior to joining iCargoEx, Emma served as logistics manager for Total Solutions at its NJ location. She was also co-founder of Shanghai HY Industry, which achieved $1.2 million in annual sales in 2016, and from 2003-2009 served as Executive VP of Ubisoft Shanghai. Emma holds a Master of Supply Chain Analytics from Rutgers (2023), an MBA from Donghua University (2012) and a Bachelor of Logistics Management from Beijing Wuzi University (2003).</p></div>
+    <div><div class="head"><img src="img/team-emma-zhuang.jpg" alt="Emma Zhuang"><div><h3>Emma Zhuang</h3><div class="role">Regional Manager, West Coast</div></div></div><p>Regional Manager for the iCargoEx West region including Los Angeles and Sacramento since 2020. Prior to joining iCargoEx, Emma served as warehouse manager for Z4 Trucking based in Rancho Cucamonga, CA. She served as Account Manager at Liaoning Peace Travel Agency from 2004-2008 and as Director of Marketing &amp; Sales for the Shenyang Ocean Travel Group from 2008 to 2018.</p></div>
+  </div>
+</div></section>
+
+<section class="band cta"><div class="wrap center">
+  <h2>Supercharge Your Supply Chain</h2>
+  <p class="sub">Optimize your e-commerce logistics with our comprehensive fulfillment and returns solutions. Experience faster delivery times, reduced costs, and improved customer satisfaction.</p>
+  <div class="ctas" style="justify-content:center;margin-top:26px"><a class="btn amber" href="mailto:info@icargoex.com?subject=Request%20For%20Quote">Talk To An Expert</a><a class="btn line" href="#services">Learn More</a></div>
+  <div class="gal">
+    <img src="img/wl-docks.jpg" alt="Containers and trailers at the Woodland docks" loading="lazy">
+    <img src="img/wl-shelf.jpg" alt="Shelving for small parcel orders" loading="lazy">
+    <img src="img/atl-crates.jpg" alt="Crated oversized freight" loading="lazy">
+    <img src="img/atl-docks.jpg" alt="FedEx trailers at the Atlanta docks" loading="lazy">
+  </div>
+  <p class="cap">Our warehouses are equipped with state-of-the-art technology to ensure accurate and efficient order fulfillment.</p>
+</div></section>
+
+<footer><div class="wrap">
+  <div><img src="img/logo.png" alt="iCargoEx" style="height:24px;width:auto;margin-bottom:10px"><p>Fulfilling our promises to online sellers</p></div>
+  <div><h4>Product</h4><a href="#about">About</a><a href="#network">Network</a><a href="#services">Services</a><a href="#returns">Returns</a><a href="#repair">Repair Center</a></div>
+  <div><h4>Headquarters</h4><p>502 Valentine Industrial Parkway, Suite 200<br>Pendergrass, GA 30567</p></div>
+  <div><h4>Contact</h4><p>info@icargoex.com</p></div>
+</div>
+<div class="wrap copy">© 2026 iCargoEx Inc. All rights reserved.</div>
+</footer>
+
+<script>
+{
+const S=[
+ {r:"West Coast",code:"WL-CA",city:"Woodland, CA",area:"Sacramento",sq:220000,addr:"550 N Pioneer Ave, Suite 400, Woodland, CA 95776",tags:["Cross-dock","61 loading docks","Daily FedEx & UPS"],tel:"916-512-9296"},
+ {r:"West Coast",code:"ND-CA",city:"Fontana, CA",area:"Los Angeles",sq:70000,addr:"10746 Commerce Way, Suite B, Fontana, CA 92337",tags:["15 loading docks","24/7 secure yard","Returns & rework"],tel:"626-500-9889"},
+ {r:"West Coast",code:"TK1-CA",city:"Tecate, CA",area:"U.S.–Mexico border",sq:10000,addr:"24024 Humphries Road, Bldg #2, Tecate, CA 91980",tags:["Cross-border","Bonded"]},
+ {r:"Central",code:"TS-CHI",city:"Joliet, IL",area:"Chicago",sq:140000,addr:"3499 S Chicago St, Joliet, IL 60436",tags:["Midwest"]},
+ {r:"Central",code:"NL-TX",city:"Houston, TX",area:"Houston",sq:130000,addr:"7207-7211 North Loop East, Houston, TX 77028",tags:["Gulf Coast"],tel:"725-216-8580"},
+ {r:"East Coast",code:"BC-GA",city:"Pendergrass, GA",area:"Atlanta · Headquarters",sq:175000,addr:"502 Valentine Industrial Parkway, Suite 200, Pendergrass, GA 30567",tags:["Large & oversized","Daily FedEx & UPS"],tel:"470-760-8113"},
+ {r:"East Coast",code:"DS-GA",city:"Savannah, GA",area:"Savannah",sq:200000,addr:"101 Landmark Blvd, Suite 100, Savannah, GA 31405",tags:["Southeast"]},
+ {r:"East Coast",code:"LL-FL",city:"Lakeland, FL",area:"Tampa area",sq:80000,addr:"2025 W Memorial Blvd, Suite 200, Lakeland, FL 33815",tags:["Florida"]},
+ {r:"East Coast",code:"LD-NJ",city:"Linden, NJ",area:"New York / New Jersey",sq:200000,addr:"1600 Lower Rd, Linden, NJ 07036",tags:["Northeast"],tel:"908-266-0470"},
+ {r:"Mexico",code:"TEC-MX",city:"Tecate, B.C.",area:"Baja California",addr:"Encinos 130, Parque Industrial, Tecate, B.C.",tags:["IMMEX","T86 bonded","Cross-border"],mail:"juliana@mexus.me"},
+ {r:"Mexico",code:"CDMX",city:"Mexico City",area:"Final mile in Mexico",tags:["Mercado Libre","Mexico FBA"]}
+];
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const us=S.filter(s=>s.sq),total=us.reduce((a,s)=>a+s.sq,0),max=Math.max(...us.map(s=>s.sq));
+document.getElementById("herocards").innerHTML=[["97%","US Coverage"],[us.length,"U.S. Fulfillment Centers"],[(total/1e6).toFixed(1)+"M+","Sq Ft Warehouse Space"],["2","Mexico Locations"]].map(c=>`<div><b>${esc(c[0])}</b><span>${esc(c[1])}</span></div>`).join("");
+document.getElementById("stats").innerHTML=[["COVERAGE","97%","of continental U.S.A covered by FedEx, UPS, and other major LTL carriers"],["FULFILLMENT CENTERS",us.length+" + 2","fulfillment centers in the U.S., plus Tecate and Mexico City in Mexico"],["SPECIALIZATION","Large Items","Specialized in handling furniture, e-bikes and other large items for e-commerce sellers"],["RETURNS","Return & Rework","Processing returns or rework inventory by exporting tariff-free to our Mexico border factory under IMMEX"]].map(s=>`<div><small>${esc(s[0])}</small><b>${esc(s[1])}</b><p>${esc(s[2])}</p></div>`).join("");
+const regions=[...new Set(S.map(s=>s.r))];
+document.getElementById("regions").innerHTML=regions.map(r=>`<div class="region"><h3>${esc(r)}</h3><div class="grid">${S.filter(s=>s.r===r).map(s=>`<article class="site"><div class="top"><h4>${esc(s.city)}</h4><span class="code">${esc(s.code)}</span></div><div class="addr" style="margin-top:-4px">${esc(s.area)}</div>${s.sq?`<div class="sq"><span>${s.sq.toLocaleString("en-US")} sq ft</span><span class="meter"><i style="width:${(s.sq/max*100).toFixed(0)}%"></i></span></div>`:""}${s.addr?`<div class="addr">${esc(s.addr)}</div>`:""}<div class="tags">${s.tags.map(t=>`<span>${esc(t)}</span>`).join("")}</div>${s.tel?`<div class="tel">${esc(s.tel)}</div>`:s.mail?`<div class="tel">${esc(s.mail)}</div>`:""}</article>`).join("")}</div></div>`).join("");
+const V=[
+ ["Drayage","Container pickup from the Ports of Los Angeles and Long Beach and delivery to our warehouses, including cross-border drayage to Tijuana, Mexicali and Tecate."],
+ ["Storage","Pallet and floor storage for cartons through large and oversized freight, in secure facilities."],
+ ["B2C Fulfillment","Pick, pack and ship for online orders by FedEx and UPS, with daily drop trailers at our larger buildings."],
+ ["B2B & LTL/FTL Distribution","Retail and wholesale orders shipped by major LTL carriers or full truckload, nationwide."],
+ ["FBA Storage & Transshipping","Hold inventory with us and send it on to Amazon fulfillment centers when you need it."],
+ ["Returns & Repair","Returns processing, inspection, battery and parts replacement, restocking, and full repair at the Mexus Repair Center in Tijuana."],
+ ["Local Delivery","Our own dry van trucks for local delivery and transfers between buildings."],
+ ["U.S.–Mexico Cross-Border","IMMEX certified, T86 bonded warehousing in Tecate, and door-to-door service to Mexico City for Mercado Libre and Mexico FBA sellers."]
+];
+document.getElementById("svc").innerHTML=V.map(v=>`<div><h3>${esc(v[0])}</h3><p>${esc(v[1])}</p></div>`).join("");
+}
+</script>
+</body>
+</html>

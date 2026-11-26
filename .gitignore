@@ -54,12 +54,12 @@ typings/
 # dotenv environment variable files
 .env*
 
-# gatsby files
-.cache/
-public
+# Netlify publish output, copied from the repo root at deploy time
+public/
 
 # Mac files
 .DS_Store
+__MACOSX/
 
 # Yarn
 yarn-error.log
